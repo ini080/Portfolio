@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "deploy" : "npm run build&&gh-pages -d build"
+    "deploy" : "cp ./dist/index.html ./index.html && cp ./favicon.ico ./dist/favicon.ico"
 
   },
   "homepage": "https://github.com/ini080/ini080.github.io",
