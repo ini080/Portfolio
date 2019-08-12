@@ -1,0 +1,37 @@
+{
+  "name": "jg-portfolio",
+  "version": "0.1.0",
+  "description": "JG's Portfolio Page",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "homepage": "https://github.com/ini080ini080.github.io",
+"repository": {
+  "type": "git",
+  "url": "https://github.com/ini080ini080.github.io"
+},
+  "dependencies": {
+    "core-js": "^2.6.5",
+    "vue": "^2.6.10",
+    "vue-grid-layout": "^2.3.4",
+    "vue-router": "^3.0.3",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.10.0",
+    "@vue/cli-service": "^3.10.0",
+    "vue-svg-loader": "^0.12.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "license": "MIT"
+}
