@@ -12,17 +12,18 @@
 
   <div class="Login_area">
     <div class="userLogo"><img src="../../public/window_login.jpg" /></div>
-    <div class="userName">
+
+    <div class="userName" v-if="!login">
       <h1>JeongGeon Heo</h1>
     </div>
-    <div class="userEmail">
+    <div class="userEmail" v-if="!login">
       <h3>ini080@naver.com</h3>
     </div>
     <transition name="fade" mode="out-in">
-      <button class="login__button-area__button" @click="onLogin" v-if="!login">
+      <button class="userLogin_button" @click="onLogin" v-if="!login">
         Login
       </button>
-      <div class="login__button-area__message" v-else>환영합니다</div>
+      <div class="userLogin_message" v-else>환영합니다</div>
     </transition>
   </div>
 </div>
@@ -96,7 +97,7 @@ html {
   height: 100vh;
 }
 
-.time_area{
+.time_area {
   position: absolute;
   bottom: 0;
   margin: 20px;
@@ -107,7 +108,8 @@ html {
   font-weight: bold;
   padding: 10px 20px;
 }
-.date_area{
+
+.date_area {
   position: absolute;
   bottom: 0;
   margin: 0;
@@ -132,7 +134,9 @@ html {
 .userLogo {
   width: 15em;
   height: 15em;
-  position: relative;
+  position: absolute;
+  top: 25%;
+  left: 40%;
   margin: 0em auto;
   display: block;
 }
@@ -144,28 +148,28 @@ html {
 }
 
 .userName {
+  position: absolute;
+  top: 55%;
+  left: 40%;
   text-align: center;
   color: #fff;
   margin: 1em 0em 1em 0em;
 }
 
 .userEmail {
+  position: absolute;
+  top: 60%;
+  left: 42%;
   text-align: center;
   color: #fff;
   margin: 1em 0em 1em 0em;
 }
 
-.passwordInput {
-  position: relative;
-  margin: 0 auto;
-  display: block;
-  font-size: 2em;
-  width: 10em;
-  outline: none;
-  border: rgba(204, 204, 204, 0.7) solid;
-}
 
-.login__button-area__button {
+.userLogin_button {
+  position: absolute;
+  top: 65%;
+  left: 45%;
   cursor: pointer;
   border: 1px solid #fff;
   border-radius: 5px;
@@ -181,18 +185,25 @@ html {
     color: #eee;
   }
 }
-.login__button-area__message {
-  width: 100%;
+
+.userLogin_message {
+  position: absolute;
+  top: 55%;
+  left: 42%;
+  text-align: center;
   font-weight: bold;
   font-size: 2rem;
   color: #fff;
-  text-align: center;
+
 }
-.fade-enter-active, .fade-leave-active {
+
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 0.5s
 }
 
-.fade-enter, .fade-leave-active {
+.fade-enter,
+.fade-leave-active {
   opacity: 0
 }
 </style>
