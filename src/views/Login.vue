@@ -1,57 +1,78 @@
 <template>
 <div class="wrapper">
-  <div>
-    <button v-on:click="show = !show">
-      Toggle
-    </button>
-    <transition name="bounce">
-      <p v-if="show">hello</p>
-    </transition>
-  </div>
-  <div class="Page1">
+  <div class="LockPage">
     <div class="time">
-      <h1>20:30</h1>
+      <h1>{{ap}} {{ time }}</h1>
     </div>
-    <div @click="urlgo()">ggg</div>
     <div class="date">
-      <h1>2016/4/9</h1>
+      <h1>{{ date }}</h1>
     </div>
   </div>
-  <div class="Page2">
-    <div class="userLogo"><img src="../assets/logo.png" /></div>
+  <div class="Login_area">
+    <div class="userLogo"><img src="../../public/window_login.jpg" /></div>
     <div class="userName">
       <h1>JeongGeon Heo</h1>
     </div>
     <div class="userEmail">
       <h3>ini080@naver.com</h3>
     </div>
-    <input class="passwordInput" type="password" />
+    <transition name="fade" mode="out-in">
+      <button class="login__button-area__button" @click="onLogin" v-if="!login">
+        Login
+      </button>
+      <div class="login__button-area__message" v-else>환영합니다</div>
+    </transition>
   </div>
 </div>
 </template>
 
 <script>
+import Format from '@/date-format.js'
+
 export default {
   name: 'Login',
   data() {
     return {
       show: true,
-    };
+      login: false,
+      format: Format,
+      time: Format.getTime(null, this.$store.state.language),
+      date: Format.getDate(null, this.$store.state.language),
+      ap: Format.getAp(null, this.$store.state.language)
+    }
   },
-  mounted() {},
+  created() {
+    this.refreshTime();
+
+  },
+  mounted: function() {
+    $(document).ready(function() {
+      $('.LockPage').click(function() {
+        $('.LockPage').animate({
+          'top': '-200vh'
+        }, 1000);
+      });
+    })
+  },
   methods: {
-    urlgo() {
-      const Page1 = document.querySelector('.Page1');
-      Page1.style.top = '-200vh'
+    refreshTime() { // 시간과 날짜 1초마다 갱신
+      setInterval(() => {
+        this.time = this.format.getTime(null, this.$store.state.language)
+        this.date = this.format.getDate(null, this.$store.state.language)
+        this.ap = this.format.getAp(null, this.$store.state.language)
+      }, 1000)
     },
-
-
+    onLogin() { // 2.5초 후 부모에게 onLogin 이벤트 emit
+      this.login = true
+      setTimeout(() => {
+        this.$emit('onLogin')
+      }, 2500)
+    },
   }
 }
 </script>
 
 <style >
-
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 * {
@@ -64,42 +85,32 @@ html {
   overflow: hidden;
 }
 
-
-.Page1 {
+.LockPage {
   z-index: 2;
   position: relative;
-  background: url('http://betanews.com/wp-content/uploads/2015/09/Windows-10-lock-screen.jpg') center;
+  background: url("http://betanews.com/wp-content/uploads/2015/09/Windows-10-lock-screen.jpg") center;
   background-size: 100vw 100vh;
-
   width: 100vw;
   height: 100vh;
-
-
-  & h1 {
-    position: relative;
-    color: #FFF;
-    font-size: 5em;
-    font-family: Open Sans;
-    top: 65vh;
-  }
-
 }
 
+.LockPage h1 {
+  position: relative;
+  color: #fff;
+  font-size: 5em;
+  font-family: Open Sans;
+  top: 65vh;
+}
 
-
-.Page2 {
+.Login_area {
   z-index: 1;
   position: relative;
-  background: url('http://i1-news.softpedia-static.com/images/news2/adobe-after-effects-master-creates-downloadable-version-of-windows-10-wallpaper-485537-2.jpg') no-repeat;
-
+  background: url("http://i1-news.softpedia-static.com/images/news2/adobe-after-effects-master-creates-downloadable-version-of-windows-10-wallpaper-485537-2.jpg") no-repeat;
   background-size: 100vw 100vh;
-
-
-
   width: 100vw;
   height: 100vh;
-
   top: -100vh;
+
 }
 
 .userLogo {
@@ -108,25 +119,23 @@ html {
   position: relative;
   margin: 0em auto;
   display: block;
-
-  & img {
-    width: 15em;
-    height: 15em;
-    border-radius: 10em;
-  }
 }
 
+.userLogo img {
+  width: 15em;
+  height: 15em;
+  border-radius: 10em;
+}
 
 .userName {
   text-align: center;
-  color: #FFF;
+  color: #fff;
   margin: 1em 0em 1em 0em;
 }
 
-
 .userEmail {
   text-align: center;
-  color: #FFF;
+  color: #fff;
   margin: 1em 0em 1em 0em;
 }
 
@@ -138,12 +147,36 @@ html {
   width: 10em;
   outline: none;
   border: rgba(204, 204, 204, 0.7) solid;
+}
 
+.login__button-area__button {
+  cursor: pointer;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0);
+  outline: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #eee;
+  }
 }
-bounce-enter-active {
-  animation: bounce-in .5s;
+.login__button-area__message {
+  width: 100%;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
 }
-.bounce-leave-active {
-  animation: bounce-in .5s reverse;
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
 }
 </style>

@@ -1,5 +1,9 @@
 <template>
   <div id="app">
+    <button  @click="Logout" >
+      Logout
+    </button>
+
     <div>
       <img width="120" height="120" src="../../public/banner.png">
     </div>
@@ -578,6 +582,11 @@ export default {
     rotateArray2: [-90, 90],
   }),
   methods: {
+    Logout() { // 2.5초 후 부모에게 onLogin 이벤트 emit
+      setTimeout(() => {
+        this.$emit('onLogout')
+      }, 2500)
+    },
     setRotateX(layoutItem, rotateIndexName, rotateArray) {
       layoutItem.rotateX += rotateArray[this[rotateIndexName] % rotateArray.length];
       this[rotateIndexName] += 1;

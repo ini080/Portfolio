@@ -8,22 +8,15 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes: [
-    {
+  routes: [{
       path: '/',
-      name: 'Start',
-      component: Start
+      name: 'Login',
+      component: Login
     },
     {
-      path:'/Home',
-      name:'Home',
+      path: '/Home',
+      name: 'Home',
       component: Home
     },
-    {
-      path:'Login',
-      name:'Login',
-      component:Login
-    }
-
   ]
 })

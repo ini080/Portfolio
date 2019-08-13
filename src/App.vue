@@ -1,8 +1,26 @@
 <template>
   <div id="app">
-    <router-view/>
+    <transition name="fade" mode="out-in">
+  <router-view
+    @onLogin="changeRoute('Home')"
+    @onLogout="changeRoute('Login')">
+  </router-view>
+</transition>
   </div>
 </template>
+
+
+<script>
+export default {
+  name: 'app',
+  methods: {
+    changeRoute (routeName) {
+      this.$router.push({ name: routeName })
+    }
+  }
+}
+</script>
+
 
 <style>
 #app {
