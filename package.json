@@ -4,9 +4,7 @@
   "description": "JG's Portfolio Page",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "deploy" : "cp ./dist/index.html ./index.html && cp ./favicon.ico ./dist/favicon.ico"
-
+    "build": "vue-cli-service build"
   },
   "homepage": "https://github.com/ini080/ini080.github.io",
   "dependencies": {
