@@ -41,7 +41,7 @@ export default {
 
 <style>
 .spotlight_body {
-    background: url(../../public/window_login.jpg) no-repeat center;
+    
     background-size: cover;
     height: 100vh;
     cursor: none;
