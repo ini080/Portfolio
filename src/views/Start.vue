@@ -33,7 +33,7 @@ export default {
       });
     },
     urlgo() {
-        this.$router.push({name:'Home'})
+        this.$router.push({name:'Login'})
     }
   }
 }
