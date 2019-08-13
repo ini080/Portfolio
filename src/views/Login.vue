@@ -1,13 +1,15 @@
 <template>
 <div class="wrapper">
+
   <div class="LockPage">
-    <div class="time">
-      <h1>{{ap}} {{ time }}</h1>
+    <div class="time_area">
+      {{ap}} {{ time }}
     </div>
-    <div class="date">
-      <h1>{{ date }}</h1>
+    <div class="date_area">
+      {{ date }}
     </div>
   </div>
+
   <div class="Login_area">
     <div class="userLogo"><img src="../../public/window_login.jpg" /></div>
     <div class="userName">
@@ -88,24 +90,38 @@ html {
 .LockPage {
   z-index: 2;
   position: relative;
-  background: url("http://betanews.com/wp-content/uploads/2015/09/Windows-10-lock-screen.jpg") center;
+  background: url("../../public/windows_background.jpg") center;
   background-size: 100vw 100vh;
   width: 100vw;
   height: 100vh;
 }
 
-.LockPage h1 {
-  position: relative;
+.time_area{
+  position: absolute;
+  bottom: 0;
+  margin: 20px;
   color: #fff;
-  font-size: 5em;
+  font-size: 6em;
   font-family: Open Sans;
   top: 65vh;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+.date_area{
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  color: #fff;
+  font-size: 4em;
+  font-family: Open Sans;
+  top: 65vh;
+  padding: 150px 80px;
 }
 
 .Login_area {
   z-index: 1;
   position: relative;
-  background: url("http://i1-news.softpedia-static.com/images/news2/adobe-after-effects-master-creates-downloadable-version-of-windows-10-wallpaper-485537-2.jpg") no-repeat;
+  background: url("../../public/windows_login.jpg") no-repeat;
   background-size: 100vw 100vh;
   width: 100vw;
   height: 100vh;
