@@ -1,6 +1,6 @@
 <template>
   <body @click="urlgo" class="spotlight_body">
-    <h1 class="spotlight_text">윌리를 찾아주세요</h1>
+    <h1 class="spotlight_text">Login</h1>
     <div class="spotlight"></div>
   </body>
 </template>
@@ -41,7 +41,7 @@ export default {
 
 <style>
 .spotlight_body {
-    background: url(https://s-i.huffpost.com/gen/4223780/original.jpg) no-repeat center;
+    background: url(../../public/window_login.jpg) no-repeat center;
     background-size: cover;
     height: 100vh;
     cursor: none;
