@@ -585,7 +585,7 @@ export default {
     Logout() { // 2.5초 후 부모에게 onLogin 이벤트 emit
       setTimeout(() => {
         this.$emit('onLogout')
-      }, 2500)
+      }, 1000)
     },
     setRotateX(layoutItem, rotateIndexName, rotateArray) {
       layoutItem.rotateX += rotateArray[this[rotateIndexName] % rotateArray.length];
