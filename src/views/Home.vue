@@ -11,7 +11,7 @@
       JG Portfolio
     </div>
     <div class="subtitle">
-      *click to animate or drag to rearrange
+      Vue.js로 만든 포트폴리오 입니다.
     </div>
 
     <div class="grid-layout-container margin-right">

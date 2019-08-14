@@ -135,7 +135,7 @@ html {
   height: 15em;
   position: absolute;
   top: 28%;
-  left: 45%;
+  left: 43%;
   margin: 0em auto;
   display: block;
 }
@@ -149,7 +149,7 @@ html {
 .userName {
   position: absolute;
   top: 55%;
-  left: 45%;
+  left: 42%;
   text-align: center;
   color: #fff;
   margin: 1em 0em 1em 0em;
@@ -160,7 +160,7 @@ html {
 .userLogin_button {
   position: absolute;
   top: 63%;
-  left: 49%;
+  left: 48%;
   cursor: pointer;
   border: 1px solid #fff;
   border-radius: 5px;
@@ -180,7 +180,7 @@ html {
 .userLogin_message {
   position: absolute;
   top: 57%;
-  left: 47%;
+  left: 46%;
   text-align: center;
   font-weight: bold;
   font-size: 2rem;
