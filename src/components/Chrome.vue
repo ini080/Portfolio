@@ -1,7 +1,7 @@
 <template>
 <div class="chrome" id="chrome-pop-up">
     <div class="pop-up">
-
+<title-bar @onClose="$emit('onClose')"></title-bar>
         <!-- Taskbar chrome-->
 
         <!-- Top -->
@@ -75,9 +75,7 @@ import About from '@/components/AboutMe.vue'
 
 
 export default {
-  props: {
-    data: Object,
-  },
+
   components: {
     'title-bar': Title,
 
@@ -758,7 +756,6 @@ export default {
     height: 500px;
     width: 900px;
     background: white;
-    visibility: hidden;
     border: 2px solid #004275;
     z-index: 1;
     resize: both;

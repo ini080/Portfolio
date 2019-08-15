@@ -19,7 +19,7 @@
   </transition>
 
   <transition name="fade" mode="in-out">
-    <chrome-view v-if="Chrome" :data="data" :type="type" @onClose="onClose" />
+    <chrome-view v-if="Chrome" @onClose="onChromeClose" />
   </transition>
 
   <div class="grid-layout-container margin-right">
@@ -345,7 +345,7 @@ export default {
       this.window = true
     },
     onClose() { // 윈도우 닫기
-      this.window = false
+      this.Chrome = false
     },
 
     chromeClick(n) { // 단축아이콘 클릭 (0~7)
@@ -359,9 +359,8 @@ export default {
       }
     },
     showChrome(n) {
-      this.type = n
-      this.data = { 'title' : 'AboutMe'}
-      this.window = true
+
+      this.Chrome = true
     },
     onChromeClose() { // 윈도우 닫기
       this.Chrome = false
