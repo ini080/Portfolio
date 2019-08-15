@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import Start from './views/Start.vue'
 import Login from './views/Login.vue'
 Vue.use(Router)
 

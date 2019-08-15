@@ -1,24 +1,21 @@
 <template>
   <div id="about">
-    <img class="about__profile-image" src="@/assets/lgh.png">
-    <div class="about__profile-name">{{ language[$store.state.language].name }}</div>
-    <div class="about__profile-birth">{{ language[$store.state.language].birth }} 2000.05.09</div>
-    <div class="about__profile-motto">{{ language[$store.state.language].motto }}: {{ language[$store.state.language]['motto-text'] }}</div>
+    <div class="about__profile-name">허정건</div>
+    <div class="about__profile-birth">1994.04.26</div>
+    <div class="about__profile-motto"> 모토 : 백문이 불여일타 }}</div>
     <div class="about__profile-education">
-      <div id="about__profile-education__title">{{ language[$store.state.language].education }}</div>
-      <div class="about__profile-education__text">{{ language[$store.state.language].high }}</div>
-      <div class="about__profile-education__text">{{ language[$store.state.language].middle }}</div>
+      <div id="about__profile-education__title"> 학력 </div>
+      <div class="about__profile-education__text">광주고등학교</div>
+      <div class="about__profile-education__text">조선대학교 컴퓨터공학과</div>
     </div>
   </div>
 </template>
 
 <script>
-import Language from '@/language/AboutLanguage.js'
 
 export default {
   data () {
     return {
-      language: Language
     }
   }
 }

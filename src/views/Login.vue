@@ -47,9 +47,9 @@ export default {
       show: true,
       login: false,
       format: Format,
-      time: Format.getTime(null, this.$store.state.language),
-      date: Format.getDate(null, this.$store.state.language),
-      ap: Format.getAp(null, this.$store.state.language)
+      time: Format.getTime(null, 'kr'),
+      date: Format.getDate(null, 'kr'),
+      ap: Format.getAp(null, 'kr')
     }
   },
   created() {
@@ -68,9 +68,9 @@ export default {
   methods: {
     refreshTime() { // 시간과 날짜 1초마다 갱신
       setInterval(() => {
-        this.time = this.format.getTime(null, this.$store.state.language)
-        this.date = this.format.getDate(null, this.$store.state.language)
-        this.ap = this.format.getAp(null, this.$store.state.language)
+        this.time = this.format.getTime(null, 'kr')
+        this.date = this.format.getDate(null, 'kr')
+        this.ap = this.format.getAp(null, 'kr')
       }, 1000)
     },
     onLogin() {
