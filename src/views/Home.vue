@@ -1,9 +1,10 @@
 <template>
 <div id="app">
+  <startbar-vue/>
   <button @click="Logout">
     Logout
   </button>
-
+  <startbar-vue/>
   <div>
     <img width="120" height="120" src="../../public/banner.png">
   </div>
@@ -234,6 +235,7 @@ import Shortcut from '@/models/Shortcut.js'
 import ShortcutComponent from '@/components/Shortcut.vue'
 import WindowComponent from '@/components/Window.vue'
 import ChromeComponent from '@/components/Chrome.vue'
+import StartbarComponent from '@/components/Startbar.vue'
 
 import Format from '@/date-format.js'
 import Icons_Left from '@/models/Icons_Left.js'
@@ -284,7 +286,8 @@ export default {
     AccessIcon,
     'shortcut-icon': ShortcutComponent,
     'window-view': WindowComponent,
-    'chrome-view': ChromeComponent
+    'chrome-view': ChromeComponent,
+    'startbar-vue' : StartbarComponent,
   },
   data: () => ({
     shortcut: Shortcut,
