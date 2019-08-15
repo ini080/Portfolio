@@ -2,7 +2,7 @@
   <div id="about">
     <div class="about__profile-name">허정건</div>
     <div class="about__profile-birth">1994.04.26</div>
-    <div class="about__profile-motto"> 모토 : 백문이 불여일타 }}</div>
+    <div class="about__profile-motto"> 모토 : 백문이 불여일타 </div>
     <div class="about__profile-education">
       <div id="about__profile-education__title"> 학력 </div>
       <div class="about__profile-education__text">광주고등학교</div>

@@ -15,11 +15,7 @@
   </div>
 
   <transition name="fade" mode="in-out">
-    <window-view v-if="window" :data="data" :type="type" @onClose="onClose" />
-  </transition>
-
-  <transition name="fade" mode="in-out">
-    <chrome-view v-if="Chrome" @onClose="onChromeClose" />
+    <chrome-view v-if="Chrome"  :title="title" :type="type" @onClose="onClose" />
   </transition>
 
   <div class="grid-layout-container margin-right">
@@ -298,6 +294,8 @@ export default {
     layoutLeft: Icons_Left,
     layoutRight: Icons_Right,
     format: Format,
+    type:0,
+    title:'',
     time: Format.getTime(null, 'kr'),
     date: Format.getDate(null, 'kr'),
     ap: Format.getAp(null, 'kr'),
@@ -329,21 +327,7 @@ export default {
         this.ap = this.format.getAp(null, 'kr')
       }, 1000)
     },
-    shortcutClick(n) { // 단축아이콘 클릭 (0~7)
-      console.log(n)
-      if (n !== 5 && n !== 6) {
-        this.showWindow(n) // 5, 6이 아니면 윈도우 띄우기
-      } else if (n === 5) {
-        window.open('https://github.com/leegeunhyeok') // 깃허브 새창으로 열기
-      } else {
-        window.open('mailto:lghlove0509@naver.com') // 메일 프로그램 연결
-      }
-    },
-    showWindow(n) {
-      this.type = n
-      this.data = { 'title' : 'AboutMe'}
-      this.window = true
-    },
+
     onClose() { // 윈도우 닫기
       this.Chrome = false
     },
@@ -359,12 +343,11 @@ export default {
       }
     },
     showChrome(n) {
-
+      this.type = n
+      this.title = 'About Me'
       this.Chrome = true
     },
-    onChromeClose() { // 윈도우 닫기
-      this.Chrome = false
-    },
+
     Logout() { // 2.5초 후 부모에게 onLogin 이벤트 emit
       setTimeout(() => {
         this.$emit('onLogout')

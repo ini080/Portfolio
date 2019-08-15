@@ -12,7 +12,7 @@
                     <span class="icons-tabs">
                         <i class="fab fa-codepen"></i>
                     </span>
-                    <span class="text-tabs">Portfolio</span>
+                    <span class="text-tabs">{{title}}</span>
                     <span class="close-tabs">x</span>
                 </div>
                 <div class="triangle-2"></div>
@@ -21,7 +21,7 @@
             <div class="chrome-close">
                 <a href="#"><i class="fas fa-minus"></i></a>
                 <a href="#"><i class="far fa-window-restore"></i></a>
-                <a href="#"><i class="fas fa-times"></i></a>
+                <a href="#" @click="$emit('onClose')"><i class="fas fa-times"></i></a>
             </div>
         </div>
         <!-- Bottom -->
@@ -62,7 +62,7 @@
 
         </div>
         <!-- 여기에 꾸며볼까?-->
-                <about-view/>
+                <about-view v-if="type == 0"/>
     </div>
   </div>
 </template>
@@ -70,17 +70,18 @@
 
 <script>
 import Title from '@/components/TitleBar.vue'
-
 import About from '@/components/AboutMe.vue'
 
 
 export default {
+  props: {
+    title: String,
+    type: String // type: 0(폴더), 1(터미널), 2(브라우저), 3(정보)
+  },
 
   components: {
     'title-bar': Title,
-
     'about-view': About,
-
   }
 }
 </script>
