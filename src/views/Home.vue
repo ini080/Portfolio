@@ -233,7 +233,6 @@
 <script>
 import Shortcut from '@/models/Shortcut.js'
 import ShortcutComponent from '@/components/Shortcut.vue'
-import WindowComponent from '@/components/Window.vue'
 import ChromeComponent from '@/components/Chrome.vue'
 import StartbarComponent from '@/components/Startbar.vue'
 
@@ -285,7 +284,6 @@ export default {
     ChromeIcon,
     AccessIcon,
     'shortcut-icon': ShortcutComponent,
-    'window-view': WindowComponent,
     'chrome-view': ChromeComponent,
     'startbar-vue' : StartbarComponent,
   },

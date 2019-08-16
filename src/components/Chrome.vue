@@ -63,6 +63,7 @@
         </div>
         <!-- 여기에 꾸며볼까?-->
                 <about-view v-if="type == 0"/>
+                <project-view v-if="type == 1"/>
     </div>
   </div>
 </template>
@@ -70,8 +71,8 @@
 
 <script>
 import Title from '@/components/TitleBar.vue'
-import About from '@/components/AboutMe.vue'
-
+import AboutMe from '@/components/AboutMe.vue'
+import Project from '@/components/Project.vue'
 
 export default {
   props: {
@@ -81,7 +82,8 @@ export default {
 
   components: {
     'title-bar': Title,
-    'about-view': About,
+    'about-view': AboutMe,
+    'project-view':Project
   },
 
   data() {
