@@ -6,6 +6,7 @@
     @mouseup="onMouseUp($event)"
     @mouseleave="onMouseLeave"
     @touchmove.prevent="onTouchMove($event)"
+    @click="$emit('onClick')"
     ref="scene">
     <div :style="boxContainerStyle">
       <div :style="frontFaceStyle">
@@ -167,7 +168,7 @@ export default {
         opacity: this.isHover ? this.hoverGlareOpacity : 0,
         'transform-style': 'preserve-3d',
         // 'will-change': 'transform'
-      } 
+      }
     },
     clickGlareStyle: function() {
       const glareScaledsize = this.clickGlareSize * this.glareScale;
@@ -281,7 +282,7 @@ export default {
     },
 
     onMouseUp(event) {
-      // only emit click when mousedown and mouseup 
+      // only emit click when mousedown and mouseup
       // are at the same position
       if (
         this.mouseDownX === event.pageX &&
@@ -338,7 +339,7 @@ export default {
       this.isAnimating = false;
     },
 
-    // trigger glare effect when hovering 
+    // trigger glare effect when hovering
     hoverGlare(relativePos) {
       this.isHover = true;
       this.hoverX = relativePos.x;

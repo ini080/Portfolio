@@ -23,23 +23,23 @@
     <grid-layout :layout="layoutLeft" :col-num="6" :colWidth="BASE_LEN" :row-height="BASE_LEN" :is-draggable="true" :is-resizable="false" :is-mirrored="false" :vertical-compact="true" :margin="[0, 0]" :use-css-transforms="true">
       <grid-item v-for="(item, index) in layoutLeft" :x="item.x" :y="item.y" :w="item.w" :h="item.h" :i="item.i" v-on:click="shortcutClick(index)" :key="item.i">
         <div class="container">
-          <MetroTile :width="item.width" :height="item.height" :length="item.length" :rotateX="item.rotateX" :faceStyle="item.faceStyle" :index="item.i">
+          <MetroTile :width="item.width" :height="item.height" :length="item.length" :rotateX="item.rotateX" :faceStyle="item.faceStyle" :index="item.i" @onClick="chromeClick(item.i)">
             <!-- custom face for each tile in left layout-->
 
-            <template v-if="item.i === '0'">
+            <template v-if="item.i === '0'" >
               <div slot="front">
-                <EdgeIcon style="fill: white" class="icon" />
-                <div class="tile-label" v-on:click="chromeClick(item.i)">
-                  Microsoft Edge
+                <AboutMeIcon style="fill: white" class="icon" />
+                <div class="tile-label">
+                  About Me
                 </div>
               </div>
             </template>
 
             <template v-else-if="item.i === '1'">
               <div slot="front">
-                <XboxIcon style="fill: white" class="icon" />
+                <ProejctIcon style="fill: white" class="icon" />
                 <div class="tile-label">
-                  Xbox
+                  Project
                 </div>
               </div>
             </template>
@@ -242,8 +242,8 @@ import Icons_Left from '@/models/Icons_Left.js'
 import Icons_Right from '@/models/Icons_Right.js'
 import MetroTile from '../components/MetroTile.vue'
 import VueGridLayout from 'vue-grid-layout';
-import EdgeIcon from '../assets/edge.svg';
-import XboxIcon from '../assets/xbox.svg';
+import AboutMeIcon from '../assets/aboutme.svg';
+import ProejctIcon from '../assets/project.svg';
 import OfficeIcon from '../assets/office.svg';
 import OneNoteIcon from '../assets/oneNote.svg';
 import PowerPointIcon from '../assets/powerPoint.svg';
@@ -268,8 +268,8 @@ export default {
   components: {
     MetroTile,
     VueGridLayout,
-    EdgeIcon,
-    XboxIcon,
+    AboutMeIcon,
+    ProejctIcon,
     OfficeIcon,
     OneNoteIcon,
     PowerPointIcon,
@@ -347,7 +347,13 @@ export default {
     },
     showChrome(n) {
       this.type = n
-      this.title = 'About Me'
+      if( n == 0 ){
+        this.title = 'About Me'
+      } else if( n == 1){
+        this.title = 'Project'
+      } else {
+        this.title = 'Unknown'
+      }
       this.Chrome = true
     },
 

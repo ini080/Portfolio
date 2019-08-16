@@ -35,7 +35,7 @@
                     </div>
                     <div class="search-bar">
                         <span class="info"><i class="fas fa-lock"></i> Securised</span>
-                        <input type="text" value="http://codepen.io/guilome">
+                        <input type="text" v-model="URL" >
                         <span class="star"><i class="far fa-star"></i></span>
                     </div>
                     <div class="points-bar">
@@ -82,7 +82,13 @@ export default {
   components: {
     'title-bar': Title,
     'about-view': About,
-  }
+  },
+
+  data() {
+    return {
+      URL : 'https://JG_Windows/' + this.title,
+    }
+  },
 }
 </script>
 
