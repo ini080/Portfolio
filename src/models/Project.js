@@ -1,7 +1,33 @@
 export default [
-
+  {
+    'name' : '아두이노 자동주차 시스템',
+    'info' : '',
+    'disc' : '아두이노와 RC카를 결합하고, 자동으로 주차를 도와주는 시스템입니다.',
+    'lang':'',
+    'img' : '',
+    'date' : '',
+    'link' : '',
+  },
+  {
+    'name' : '스마트 블라인드',
+    'info' : 'Springboot + Mysql + Mybatis + Vue.js',
+    'disc' : '안전한 먹거리를 제공하는 프로젝트입니다.',
+    'lang':'',
+    'img' : '',
+    'date' : '',
+    'link' : '',
+  },
   {
     'name' : 'Safe_Food Project',
+    'info' : 'Springboot + Mysql + Mybatis + Vue.js',
+    'disc' : '안전한 먹거리를 제공하는 프로젝트입니다.',
+    'lang':'',
+    'img' : '',
+    'date' : '',
+    'link' : '',
+  },
+  {
+    'name' : 'Web_Mobile Project',
     'info' : 'Springboot + Mysql + Mybatis + Vue.js',
     'disc' : '안전한 먹거리를 제공하는 프로젝트입니다.',
     'lang':'',
