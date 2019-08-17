@@ -1,13 +1,6 @@
 <template>
 <div id="app">
-  <startbar-vue/>
-  <button @click="Logout">
-    Logout
-  </button>
-  <startbar-vue/>
-  <div>
-    <img width="120" height="120" src="../../public/banner.png">
-  </div>
+  <startbar-vue  @onLogout="$emit('onLogout')" />
   <div class="title">
     JG Portfolio
   </div>
@@ -403,6 +396,7 @@ body {
 }
 
 .title {
+  margin-top: 120px;
   font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 20px;
   font-weight: 500;
@@ -441,6 +435,7 @@ body {
   top: 0;
   bottom: 0;
   margin: auto;
+  z-index : -1;
 }
 
 .image {
