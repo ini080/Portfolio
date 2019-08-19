@@ -1,6 +1,7 @@
 <template>
 <div class="wrapper">
 
+
   <div class="LockPage">
     <div class="time_area">
       {{ap}} {{ time }}
