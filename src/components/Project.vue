@@ -1,5 +1,5 @@
 <template>
-  <div id="project">
+  <div class="project">
     <div class="item" v-for="(item, index) in project" :key="index">
       <div class="item__title">{{ item.name }}</div>
       <img class="item__image" :src="item.img">
@@ -42,7 +42,7 @@ export default {
 </script>
 
 <style>
-#project {
+.project {
   width: 100%;
   height: 100%;
   text-align: center;
