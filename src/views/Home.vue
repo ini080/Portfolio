@@ -163,7 +163,7 @@
             <template v-else-if="item.i === '4'">
               <div slot="front">
                 <div class="tile-label">
-                  Excel
+                  Algorithms
                 </div>
                 <ExcelIcon class="icon" />
               </div>
@@ -396,7 +396,7 @@ body {
 }
 
 .title {
-  margin-top: 100px;
+  margin-top: 5%;
   font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 40px;
   font-weight: 500;
