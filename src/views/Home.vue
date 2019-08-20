@@ -39,9 +39,9 @@
 
             <template v-else-if="item.i === '2'">
               <div slot="front">
-                <OfficeIcon style="fill: white" class="icon" />
+                <Achive style="fill: white" class="icon" />
                 <div class="tile-label">
-                  My Office
+                  Achivement
                 </div>
               </div>
             </template>
@@ -252,6 +252,8 @@ import AccessIcon from '../assets/access.svg';
 import AlgorithmIcon from '../assets/algorithm.svg';
 import MailIcon from '../assets/email.svg';
 import AboutMeIcon from '../assets/aboutme.svg';
+import Achive from '../assets/achive.svg';
+
 const BASE_LEN = 65;
 const MARGIN = 3;
 const REPO_URL = 'https://github.com/ini080';
@@ -279,6 +281,7 @@ export default {
     AccessIcon,
     AlgorithmIcon,
     MailIcon,
+    Achive,
     'shortcut-icon': ShortcutComponent,
     'chrome-view': ChromeComponent,
     'startbar-vue' : StartbarComponent,
@@ -353,7 +356,10 @@ export default {
       } else if( n == 18){
         this.title = 'Chrome'
         this.Chrome = true
-      } else {
+      } else if( n== 2 ){
+        this.title = "Achivement"
+        this.Chrome = true
+      }else {
         this.title = 'Unknown'
         this.Chrome = false
       }

@@ -65,6 +65,10 @@
     <transition name="fade" mode="out-in">
     <about-view v-if="type == 0" />
     <project-view v-if="type == 1" />
+    <achive-vue v-if="type == 2" />
+    <algorithm-vue v-if="type == 14" />
+
+    <search-vue v-if="type == 18" />
     </transition>
   </div>
 </div>
@@ -75,6 +79,9 @@
 import Title from '@/components/TitleBar.vue'
 import AboutMe from '@/components/AboutMe.vue'
 import Project from '@/components/Project.vue'
+import Search from '@/components/Search.vue'
+import Algorithm from '@/components/Algorithm'
+import Achive from '@/components/Achive'
 
 export default {
   props: {
@@ -85,7 +92,10 @@ export default {
   components: {
     'title-bar': Title,
     'about-view': AboutMe,
-    'project-view': Project
+    'project-view': Project,
+    'search-vue' : Search,
+    'algorithm-vue' : Algorithm,
+    'achive-vue' : Achive,
   },
 
   data() {
