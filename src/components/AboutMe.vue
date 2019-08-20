@@ -1,23 +1,21 @@
 <template>
   <div id="about">
-    <div class="about__profile-name"> {{ aboutme.name }}</div>
-    <div class="about__profile-birth"> {{ aboutme.birth }} 1994.04.26 </div>
-    <div class="about__profile-motto"> {{ aboutme.motto }} 백문이 불여일타 </div>
+    <div class="about__profile-name"> 허정건 </div>
+    <div class="about__profile-birth"> 생년월일 : 1994.04.26 </div>
+    <div class="about__profile-motto"> 좌우명 : 백문이 불여일타 </div>
     <div class="about__profile-education">
-      <div id="about__profile-education__title"> {{ aboutme.education }} </div>
-      <div class="about__profile-education__text"> {{ aboutme.highscholl }}</div>
-      <div class="about__profile-education__text"> {{ aboutme.university}} {{ aboutme.major}}</div>
+      <div id="about__profile-education__title"> 학력 </div>
+      <div class="about__profile-education__text"> 광주고등학교 </div>
+      <div class="about__profile-education__text"> 조선대학교 컴퓨터공학과 </div>
     </div>
   </div>
 </template>
 
 <script>
-import AboutMe from '@/models/AboutMe.js'
 
 export default {
   data () {
     return {
-      aboutme : AboutMe
     }
   }
 }
