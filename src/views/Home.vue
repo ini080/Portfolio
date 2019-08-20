@@ -5,7 +5,7 @@
     JG Portfolio
   </div>
   <div class="subtitle">
-    Vue.js로 만든 포트폴리오 입니다.
+    Made By Vue.js
   </div>
 
   <transition name="fade" mode="in-out">

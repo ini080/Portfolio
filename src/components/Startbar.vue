@@ -42,13 +42,13 @@
       <a @click="$emit('onLogout')"><i class="fas fa-power-off"></i></a>
     </div>
     <div id="apps">
-      <a class="category" href="#">&</a>
+      <a class="category" href="#">My Using Language</a>
       <a href="#"><img src="https://image.noelshack.com/fichiers/2018/22/1/1527510180-logo-microsoft-access-20132.png" alt="access"> <span>Access</span></a>
       <a href="#"><img src="http://assets.nnm-club.ws/forum/image.php?link=http://s019.radikal.ru/i622/1709/cc/334931ae4fe7.png" alt="sublime"> <span>Sublime text 3</span></a>
     </div>
     <div id="others">
       <div class="title-others">
-        Office 365
+        My Projects
       </div>
       <div class="box-others">
         <div class="box">
