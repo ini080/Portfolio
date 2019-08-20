@@ -343,16 +343,21 @@ export default {
       this.type = n
       if( n == 0 ){
         this.title = 'About Me'
+        this.Chrome = true
       } else if( n == 1){
         this.title = 'Project'
+        this.Chrome = true
       } else if( n == 14){
         this.title = 'Algorithm'
+        this.Chrome = true
       } else if( n == 18){
         this.title = 'Chrome'
+        this.Chrome = true
       } else {
         this.title = 'Unknown'
+        this.Chrome = false
       }
-      this.Chrome = true
+
     },
 
     Logout() { // 2.5초 후 부모에게 onLogin 이벤트 emit
