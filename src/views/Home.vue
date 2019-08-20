@@ -14,7 +14,7 @@
 
   <div class="grid-layout-container margin-right">
     <grid-layout :layout="layoutLeft" :col-num="6" :colWidth="BASE_LEN" :row-height="BASE_LEN" :is-draggable="true" :is-resizable="false" :is-mirrored="false" :vertical-compact="true" :margin="[0, 0]" :use-css-transforms="true">
-      <grid-item v-for="(item, index) in layoutLeft" :x="item.x" :y="item.y" :w="item.w" :h="item.h" :i="item.i" v-on:click="shortcutClick(index)" :key="item.i">
+      <grid-item v-for="(item, index) in layoutLeft" :x="item.x" :y="item.y" :w="item.w" :h="item.h" :i="item.i" :key="item.i">
         <div class="container">
           <MetroTile :width="item.width" :height="item.height" :length="item.length" :rotateX="item.rotateX" :faceStyle="item.faceStyle" :index="item.i" @onClick="chromeClick(item.i)">
             <!-- custom face for each tile in left layout-->
@@ -138,29 +138,29 @@
       <grid-item v-for="item in layoutRight" :x="item.x" :y="item.y" :w="item.w" :h="item.h" :i="item.i" :key="item.i">
         <div class="container">
           <MetroTile :width="item.width" :height="item.height" :length="item.length" :rotateX="item.rotateX" :faceStyle="item.faceStyle" :frontStyle="item.frontStyle" :topStyle="item.topStyle" :backStyle="item.backStyle"
-            :bottomStyle="item.bottomStyle" :perspective="item.perspective" v-on="item.i === '5' ? {click: redirect} : {}">
+            :bottomStyle="item.bottomStyle" :perspective="item.perspective" v-on="item.i === '5' ? {click: redirect} : {}" @onClick="chromeClick(item.i)">
             <!-- custom face for each tile in right layout-->
-            <template v-if="item.i === '0'">
+            <template v-if="item.i === '10'">
               <div slot="front">
                 <WeatherIcon style="fill: white" class="icon" />
               </div>
             </template>
-            <template v-else-if="item.i === '1'">
+            <template v-else-if="item.i === '11'">
               <div slot="front">
                 <SettingsIcon style="fill: white" class="icon" />
               </div>
             </template>
-            <template v-else-if="item.i === '2'">
+            <template v-else-if="item.i === '12'">
               <div slot="front">
                 <PhotoIcon style="fill: white" class="icon" />
               </div>
             </template>
-            <template v-else-if="item.i === '3'">
+            <template v-else-if="item.i === '13'">
               <div slot="front">
                 <CameraIcon style="fill: white" class="icon" />
               </div>
             </template>
-            <template v-else-if="item.i === '4'">
+            <template v-else-if="item.i === '14'">
               <div slot="front">
                 <div class="tile-label">
                   Algorithms
@@ -168,7 +168,7 @@
                 <AlgorithmIcon class="icon" />
               </div>
             </template>
-            <template v-else-if="item.i === '5'">
+            <template v-else-if="item.i === '15'">
               <div slot="front">
                 <div class="tile-label">
                   View Source on GitHub
@@ -176,7 +176,7 @@
                 <GithubIcon style="fill: white" class="icon" />
               </div>
             </template>
-            <template v-else-if="item.i === '6'">
+            <template v-else-if="item.i === '16'">
               <div slot="front">
                 <div class="tile-label">
                   Vue
@@ -190,7 +190,7 @@
                 <img src="../assets/angular.png" class="image" />
               </div>
             </template>
-            <template v-else-if="item.i === '7'">
+            <template v-else-if="item.i === '17'">
               <div slot="front">
                 <div class="tile-label">
                   Groove Music
@@ -198,7 +198,7 @@
                 <GrooveIcon style="fill: white" class="icon" />
               </div>
             </template>
-            <template v-else-if="item.i === '8'">
+            <template v-else-if="item.i === '18'">
               <div slot="front">
                 <div class="tile-label">
                   Google Chrome
@@ -206,7 +206,7 @@
                 <ChromeIcon class="icon" />
               </div>
             </template>
-            <template v-else-if="item.i === '9'">
+            <template v-else-if="item.i === '19'">
               <div slot="front">
                 <div class="tile-label">
                   Access
