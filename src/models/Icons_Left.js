@@ -38,7 +38,7 @@ export default [
     height: BASE_LEN * 2 - MARGIN * 2,
     rotateX: 0,
     faceStyle: {
-      'background-color': '#ff4500'
+      'background-color': '#AD46E0'
     }
   },
   {
