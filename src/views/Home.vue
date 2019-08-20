@@ -396,9 +396,9 @@ body {
 }
 
 .title {
-  margin-top: 120px;
+  margin-top: 100px;
   font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 500;
   padding: 0 0 10px 0;
   color: #fff;
