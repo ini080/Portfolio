@@ -138,7 +138,7 @@
       <grid-item v-for="item in layoutRight" :x="item.x" :y="item.y" :w="item.w" :h="item.h" :i="item.i" :key="item.i">
         <div class="container">
           <MetroTile :width="item.width" :height="item.height" :length="item.length" :rotateX="item.rotateX" :faceStyle="item.faceStyle" :frontStyle="item.frontStyle" :topStyle="item.topStyle" :backStyle="item.backStyle"
-            :bottomStyle="item.bottomStyle" :perspective="item.perspective" v-on="item.i === '5' ? {click: redirect} : {}" @onClick="chromeClick(item.i)">
+            :bottomStyle="item.bottomStyle" :perspective="item.perspective" @onClick="chromeClick(item.i)">
             <!-- custom face for each tile in right layout-->
             <template v-if="item.i === '10'">
               <div slot="front">
@@ -193,9 +193,9 @@
             <template v-else-if="item.i === '17'">
               <div slot="front">
                 <div class="tile-label">
-                  Groove Music
+                  Mail
                 </div>
-                <GrooveIcon style="fill: white" class="icon" />
+                <MailIcon style="fill: white" class="icon" />
               </div>
             </template>
             <template v-else-if="item.i === '18'">
@@ -251,7 +251,7 @@ import GrooveIcon from '../assets/groove.svg';
 import ChromeIcon from '../assets/chrome.svg';
 import AccessIcon from '../assets/access.svg';
 import AlgorithmIcon from '../assets/algorithm.svg';
-
+import MailIcon from '../assets/email.svg';
 const BASE_LEN = 65;
 const MARGIN = 3;
 const REPO_URL = 'https://github.com/ini080';
@@ -278,6 +278,7 @@ export default {
     ChromeIcon,
     AccessIcon,
     AlgorithmIcon,
+    MailIcon,
     'shortcut-icon': ShortcutComponent,
     'chrome-view': ChromeComponent,
     'startbar-vue' : StartbarComponent,
@@ -330,12 +331,12 @@ export default {
 
     chromeClick(n) { // 단축아이콘 클릭 (0~7)
       console.log(n)
-      if (n !== 5 && n !== 6) {
-        this.showChrome(n) // 5, 6이 아니면 윈도우 띄우기
-      } else if (n === 5) {
-        Chrome.open('https://github.com/leegeunhyeok') // 깃허브 새창으로 열기
-      } else {
-        Chrome.open('mailto:lghlove0509@naver.com') // 메일 프로그램 연결
+      if (n == 15) {
+        window.open('https://github.com/ini080') // 깃허브 새창으로 열기
+      } else if( n == 17){
+        window.open('mailto:ini080@naver.com') // 메일 프로그램 연결
+      } else{
+        this.showChrome(n)
       }
     },
     showChrome(n) {
@@ -344,6 +345,10 @@ export default {
         this.title = 'About Me'
       } else if( n == 1){
         this.title = 'Project'
+      } else if( n == 14){
+        this.title = 'Algorithm'
+      } else if( n == 18){
+        this.title = 'Chrome'
       } else {
         this.title = 'Unknown'
       }
