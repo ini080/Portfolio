@@ -234,7 +234,6 @@ import Icons_Left from '@/models/Icons_Left.js'
 import Icons_Right from '@/models/Icons_Right.js'
 import MetroTile from '../components/MetroTile.vue'
 import VueGridLayout from 'vue-grid-layout';
-import AboutMeIcon from '../assets/aboutme.svg';
 import ProejctIcon from '../assets/project.svg';
 import OfficeIcon from '../assets/office.svg';
 import OneNoteIcon from '../assets/oneNote.svg';
@@ -252,6 +251,7 @@ import ChromeIcon from '../assets/chrome.svg';
 import AccessIcon from '../assets/access.svg';
 import AlgorithmIcon from '../assets/algorithm.svg';
 import MailIcon from '../assets/email.svg';
+import AboutMeIcon from '../assets/aboutme.svg';
 const BASE_LEN = 65;
 const MARGIN = 3;
 const REPO_URL = 'https://github.com/ini080';
