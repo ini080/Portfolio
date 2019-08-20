@@ -165,7 +165,7 @@
                 <div class="tile-label">
                   Algorithms
                 </div>
-                <ExcelIcon class="icon" />
+                <AlgorithmIcon class="icon" />
               </div>
             </template>
             <template v-else-if="item.i === '5'">
@@ -250,6 +250,7 @@ import GithubIcon from '../assets/github.svg';
 import GrooveIcon from '../assets/groove.svg';
 import ChromeIcon from '../assets/chrome.svg';
 import AccessIcon from '../assets/access.svg';
+import AlgorithmIcon from '../assets/algorithm.svg';
 
 const BASE_LEN = 65;
 const MARGIN = 3;
@@ -276,6 +277,7 @@ export default {
     GrooveIcon,
     ChromeIcon,
     AccessIcon,
+    AlgorithmIcon,
     'shortcut-icon': ShortcutComponent,
     'chrome-view': ChromeComponent,
     'startbar-vue' : StartbarComponent,
