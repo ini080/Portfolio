@@ -12,7 +12,8 @@ export default [
     height: BASE_LEN * 2 - MARGIN * 2,
     rotateX: 0,
     faceStyle: {
-      'background-color': '#1E90FF'
+      'background-color': '#1E90FF',
+      'border' : '2px solid #FFFFFF'
     }
   },
   {
@@ -25,7 +26,8 @@ export default [
     height: BASE_LEN * 2 - MARGIN * 2,
     rotateX: 0,
     faceStyle: {
-      'background-color': '#228b22'
+      'background-color': '#228b22',
+      'border' : '2px solid #FFFFFF'
     }
   },
   {
@@ -38,7 +40,8 @@ export default [
     height: BASE_LEN * 2 - MARGIN * 2,
     rotateX: 0,
     faceStyle: {
-      'background-color': '#AD46E0'
+      'background-color': '#AD46E0',
+      'border' : '2px solid #FFFFFF'
     }
   },
   {

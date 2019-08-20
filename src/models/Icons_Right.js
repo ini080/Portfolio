@@ -64,7 +64,8 @@ export default [
     height: BASE_LEN*2 - MARGIN*2,
     rotateX: 0,
     faceStyle: {
-      'background-color': '#3cb371'
+      'background-color': '#3cb371',
+      'border' : '2px solid #FFFFFF'
     }
   },
   {
@@ -77,7 +78,8 @@ export default [
     height: BASE_LEN*4 - MARGIN*2,
     rotateX: 0,
     faceStyle: {
-      'background-color': '#000'
+      'background-color': '#000',
+      'border' : '2px solid #FFFFFF'
     }
   },
   {
@@ -113,7 +115,8 @@ export default [
     height: BASE_LEN*2 - MARGIN*2,
     rotateX: 0,
     faceStyle: {
-      'background-color': '#4169e1'
+      'background-color': '#4169e1',
+      'border' : '2px solid #FFFFFF'
     }
   },
   {
@@ -126,7 +129,8 @@ export default [
     height: BASE_LEN*2 - MARGIN*2,
     rotateX: 0,
     faceStyle: {
-      'background-color': '#4169e1'
+      'background-color': '#4169e1',
+      'border' : '2px solid #FFFFFF'
     }
   },
   {
