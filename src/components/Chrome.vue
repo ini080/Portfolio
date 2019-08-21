@@ -104,31 +104,6 @@ export default {
 
   <style >
 
-  /* ==========================================================================
-      General
-  ========================================================================== */
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    margin: 0;
-    padding: 0;
-    overflow-y: hidden;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
-  .desktop {
-    height: 100vh;
-    background: url(https://image.noelshack.com/fichiers/2018/22/1/1527510457-windows-10-wallpapers-in-4k.jpg);
-    background-position: center;
-    background-size: cover;
-  }
-
-
-  /* ==========================================================================
-      Chrome
-  ========================================================================== */
   #chrome-pop-up {
     position: absolute;
     top: 50%;
@@ -399,6 +374,7 @@ export default {
   }
 
   .chrome-bottom .bookmarks {
+    float: left;
     flex: 0 0 24%;
     background: #f2f2f2;
   }
