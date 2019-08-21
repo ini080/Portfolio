@@ -106,16 +106,15 @@ export default {
 
   #chrome-pop-up {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 50rem;
-    height: 33rem;
+    height: 30rem;
     background: white;
     border: 2px solid #004275;
     z-index: 1;
     resize: both;
-    overflow-y: hidden;
   }
 
   #chrome-pop-up:target {
