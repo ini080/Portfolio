@@ -285,7 +285,7 @@ export default {
 .taskbar .icons-right .datetime span {
   display: block;
   text-align: center;
-  margin-top: 5px;
+  margin-top: 3px;
   font-size: 11.3px;
   color: white;
 }
