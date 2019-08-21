@@ -12,6 +12,7 @@
     <chrome-view v-if="Chrome"  :title="title" :type="type" @onClose="onClose" />
   </transition>
 
+  <div class="icon_wap">
   <div class="grid-layout-container margin-right">
     <grid-layout :layout="layoutLeft" :col-num="6" :colWidth="BASE_LEN" :row-height="BASE_LEN" :is-draggable="true" :is-resizable="false" :is-mirrored="false" :vertical-compact="true" :margin="[0, 0]" :use-css-transforms="true">
       <grid-item v-for="(item, index) in layoutLeft" :x="item.x" :y="item.y" :w="item.w" :h="item.h" :i="item.i" :key="item.i">
@@ -220,12 +221,11 @@
     </grid-layout>
     </div>
   </div>
+  </div>
 </div>
 </template>
 
 <script>
-import Shortcut from '@/models/Shortcut.js'
-import ShortcutComponent from '@/components/Shortcut.vue'
 import ChromeComponent from '@/components/Chrome.vue'
 import StartbarComponent from '@/components/Startbar.vue'
 
@@ -282,12 +282,10 @@ export default {
     AlgorithmIcon,
     MailIcon,
     Achive,
-    'shortcut-icon': ShortcutComponent,
     'chrome-view': ChromeComponent,
     'startbar-vue' : StartbarComponent,
   },
   data: () => ({
-    shortcut: Shortcut,
     window: false, // 단축 아이콘 클릭시 윈도우 띄우기
     Chrome: false,
     BASE_LEN,
@@ -400,7 +398,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -414,7 +412,7 @@ body {
 }
 
 .title {
-  margin-top: 5%;
+  margin-top: 2%;
   font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 40px;
   font-weight: 500;
@@ -536,5 +534,7 @@ body {
   font-size: 30px;
   transform: scale(1.75);
 }
+
+
 
 </style>
