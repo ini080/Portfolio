@@ -10,7 +10,7 @@
         <div class="triangle"></div>
         <div class="tabs">
           <span class="icons-tabs">
-            <i class="fab fa-codepen"></i>
+            <i class="fab fa-chrome"></i>
           </span>
           <span class="text-tabs">{{title}}</span>
           <span class="close-tabs">x</span>
@@ -150,7 +150,7 @@ export default {
   }
 
   .chrome-tabs .tabs .text-tabs {
-    font-size: 12px;
+    font-size: 14px;
     margin-left: 3px;
     vertical-align: text-bottom;
   }
