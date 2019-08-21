@@ -50,4 +50,8 @@ export default {
   overflow-y: auto;
   background-color: #eee;
 }
+
+.item__title{
+  color: blue;
+}
 </style>
