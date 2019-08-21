@@ -58,19 +58,14 @@
           </div>
         </div>
       </div>
-      <!-- Bookmarks -->
-
     </div>
-    <!-- 여기에 꾸며볼까?-->
-    <transition name="fade" mode="out-in">
-    <about-view v-if="type == 0" />
-    <project-view v-if="type == 1" />
-    <achive-vue v-if="type == 2" />
-    <algorithm-vue v-if="type == 14" />
-
-    <search-vue v-if="type == 18" />
-    </transition>
   </div>
+  <!-- 여기에 꾸며볼까?-->
+  <about-view v-if="type == 0" />
+  <project-view v-if="type == 1" />
+  <achive-vue v-if="type == 2" />
+  <algorithm-vue v-if="type == 14" />
+  <search-vue v-if="type == 18" />
 </div>
 </template>
 
