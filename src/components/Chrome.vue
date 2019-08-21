@@ -88,9 +88,9 @@ export default {
     'title-bar': Title,
     'about-view': AboutMe,
     'project-view': Project,
-    'search-vue' : Search,
-    'algorithm-vue' : Algorithm,
-    'achive-vue' : Achive,
+    'search-vue': Search,
+    'algorithm-vue': Algorithm,
+    'achive-vue': Achive,
   },
 
   data() {
@@ -101,8 +101,8 @@ export default {
 }
 </script>
 
+<style >
 
-  <style >
 
   #chrome-pop-up {
     position: absolute;
@@ -127,7 +127,7 @@ export default {
   }
 
   .chrome-top {
-    height: 30px;
+    height: 33px;
     width: 100%;
     position: relative;
     border-bottom: 1px solid grey;
