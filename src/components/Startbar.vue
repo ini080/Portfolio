@@ -42,9 +42,22 @@
       <a @click="$emit('onLogout')"><i class="fas fa-power-off"></i></a>
     </div>
     <div id="apps">
-      <a class="category" href="#">My Using Language</a>
-      <a href="#"><img src="https://image.noelshack.com/fichiers/2018/22/1/1527510180-logo-microsoft-access-20132.png" alt="access"> <span>Access</span></a>
-      <a href="#"><img src="http://assets.nnm-club.ws/forum/image.php?link=http://s019.radikal.ru/i622/1709/cc/334931ae4fe7.png" alt="sublime"> <span>Sublime text 3</span></a>
+      <a class="category" href="#">My Skill</a>
+      <div class="category">Language</div>
+      <a href="#"><img src="http://icons.iconarchive.com/icons/alecive/flatwoken/256/Apps-Java-icon.png" alt="Java"> <span>Java</span></a>
+      <a href="#"><img src="https://antoineguillot.files.wordpress.com/2016/07/learn-javascript.png?w=344" alt="JavaScript"> <span>JavaScript</span></a>
+      <a href="#"><img src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/256/full/nodejslogo.png" alt="Node.js"> <span>Node.js</span></a>
+      <div class="category">FrameWork</div>
+      <a href="#"><img src="https://cdn-images-1.medium.com/max/1200/1*yeAO-nwsAqnzr7k-zoDkoQ.png" alt="Vue.js"> <span>Vue.js</span></a>
+      <a href="#"><img src="https://spring.io/img/homepage/icon-spring-cloud.svg" alt="Spring"> <span>Spring</span></a>
+      <a href="#"><img src="https://spring.io/img/homepage/icon-spring-boot.svg" alt="SpringBoot"> <span>SpringBoot</span></a>
+      <a href="#"><img src="https://t1.daumcdn.net/cfile/tistory/9961453359A449F403" alt="Mybatis"> <span>Mybatis</span></a>
+      <div class="category">DB</div>
+      <a href="#"><img src="https://cdn1.iconfinder.com/data/icons/programing-development-7/24/mysql_database_logo_data_base-512.png" alt="Mysql"> <span>Mysql</span></a>
+      <a href="#"><img src="https://4.bp.blogspot.com/-Fxo_qnGJBj0/WRoDPNdlEII/AAAAAAAABF0/1mSHmv5gleQaCsHKEDgTB3DbNghjCXvZACLcB/s1600/logo_firebase_1920px_clr.png" alt="Firebase"> <span>Firebase</span></a>
+      <div class="category">SCM</div>
+      <a href="#"><img src="https://miro.medium.com/max/480/1*1OKmA2EdGln8O6RCVORgGg.png" alt="Github"> <span>GitHub</span></a>
+      <a href="#"><img src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/184_Jira-512.png" alt="Jira"> <span>Jira</span></a>
     </div>
     <div id="others">
       <div class="title-others">
@@ -318,7 +331,7 @@ export default {
   position: absolute;
   left: 0;
   bottom: 43px;
-  height: 500px;
+  height: 650px;
   color: white;
   display: grid;
   grid-template-columns: 50px 250px 400px;
@@ -416,7 +429,13 @@ export default {
 }
 
 .start-menu-modal #apps a.category {
+  font-size: 15px;
   height: 30px;
+}
+
+.start-menu-modal #apps div.category {
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 
 .start-menu-modal #others .title-others {
@@ -424,7 +443,7 @@ export default {
   text-decoration: none;
   padding: 10px 10px 0px 20px;
   line-height: 2.5;
-  font-size: 12px;
+  font-size: 15px;
   letter-spacing: 0.5px;
 }
 
