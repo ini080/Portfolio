@@ -13,7 +13,6 @@ export default [
     rotateX: 0,
     faceStyle: {
       'background-color': '#1E90FF',
-      'border' : '2px solid #FFFFFF'
     }
   },
   {
@@ -27,7 +26,6 @@ export default [
     rotateX: 0,
     faceStyle: {
       'background-color': '#228b22',
-      'border' : '2px solid #FFFFFF'
     }
   },
   {
@@ -41,7 +39,6 @@ export default [
     rotateX: 0,
     faceStyle: {
       'background-color': '#AD46E0',
-      'border' : '2px solid #FFFFFF'
     }
   },
   {
