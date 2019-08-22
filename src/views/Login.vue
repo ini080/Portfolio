@@ -181,9 +181,8 @@ html {
       }
 
       .userLogin_message {
-          position: absolute;
-          top: 57%;
-          left: 46%;
+          position: relative;
+          top: 200px;
           text-align: center;
           font-weight: bold;
           font-size: 2rem;
@@ -203,9 +202,9 @@ html {
 }
 
 .loader {
-    position: absolute;
-    top: 63%;
-    left: 46%;
+    position: relative;
+    top: 185px;
+    left: -80px;
     transform: translateX(-50%) translateY(-50%);
     width: 50px;
     height: 50px;
@@ -242,15 +241,7 @@ html {
 .loader .circle:nth-child(5) {
     animation-delay: 960ms;
 }
-.loader {
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    margin-left: -16px;
-    margin-top: -16px;
-    border-radius: 13px;
-    animation: bgg 16087ms ease-in alternate infinite;
-}
+
 @keyframes orbit {
     0% {
         transform: rotate(225deg);
