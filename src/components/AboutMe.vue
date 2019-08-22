@@ -11,9 +11,9 @@
       <dt class="profile_motto">좌우명</dt>
       <dt class="profile_motto_text">백문이 불여일타</dt>
       <dt class="profile_contact">Contact Me!</dt>
-      <dd><a href="#"><i class="fas fa-envelope fa-2x"></i></a></dd>
-      <dd><a href="#"><i class="fab fa-github-alt fa-2x"></i></a></dd>
-      <dd><a href="#"><i class="fas fa-mobile fa-2x"></i></a></dd>
+      <dd><a href="#" @click="onClick(1)"><i class="fas fa-envelope fa-2x"></i></a></dd>
+      <dd><a href="#" @click="onClick(2)"><i class="fab fa-github-alt fa-2x"></i></a></dd>
+      <dd><a href="#"  @click="onClick(3)"><i class="fas fa-mobile fa-2x"></i></a></dd>
     </dl>
   </div>
 </div>
@@ -23,6 +23,18 @@
 export default {
   data() {
     return {}
+  },
+  methods: {
+    onClick(n) {
+      if (n == 1) {
+        window.open('mailto:ini080@naver.com')
+      } else if (n == 2) {
+        window.open('https://github.com/ini080')
+      } else{
+        alert("010-XXXX-XXXX")
+      }
+
+    }
   }
 }
 </script>
