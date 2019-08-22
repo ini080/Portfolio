@@ -1,14 +1,22 @@
 <template>
-  <div id="about">
-    <div class="about__profile-name"> 허정건 </div>
-    <div class="about__profile-birth"> 생년월일 : 1994.04.26 </div>
-    <div class="about__profile-motto"> 좌우명 : 백문이 불여일타 </div>
-    <div class="about__profile-education">
-      <div id="about__profile-education__title"> 학력 </div>
-      <div class="about__profile-education__text"> 광주고등학교 </div>
-      <div class="about__profile-education__text"> 조선대학교 컴퓨터공학과 </div>
-    </div>
+  <div class="profile">
+
+    <img class="picture" src="../../public/folder.png"/>
+
+    <div class="profile_info">
+      <dl>
+        <dt class="profile_name">허정건</dt>
+        <dt class="profile_birthday">1994.04.26</dt>
+        <dt class="profile_email">ini080@naver.com</dt>
+        <dt class="profile_motto">좌우명</dt>
+        <dt class="profile_motto_text">백문이 불여일타</dt>
+        <dt class="profile_contact">Contact Me!</dt>
+          <dd><i class="fas fa-envelope fa-2x"></i></dd>
+          <dd><i class="fab fa-github-alt fa-2x"></i></dd>
+          <dd><i class="fas fa-mobile fa-2x"></i></dd>
+      </dl>
   </div>
+</div>
 </template>
 
 <script>
@@ -23,46 +31,41 @@ export default {
 
 <style lang="scss">
 
-#about {
+.profile{
   width: 100%;
   height: 100%;
-  text-align: center;
-  border-radius: 0px 0px 5px 5px;
-  background-color: #eee;
-  overflow-x: hidden;
-  overflow-y: auto;
 
-  .about__profile-image {
+  .picture{
+    position: relative;
+    left: -170px;
+    top: 30px;
     border: 5px solid #fff;
     border-radius: 50%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-
-    @media only screen and (min-width: 320px) {
-      margin-top: 12%;
-    }
-
-    @media only screen and (min-width: 768px) {
-      margin-top: 14%;
-    }
-
-    @media only screen and (min-width: 1224px) {
-      margin-top: 26px;
-    }
   }
-
-  .about__profile-name {
+  .profile_info{
+    position: relative;
+    left: 100px;
+    top: -220px;
     font-size: 1rem;
     font-weight: bold;
   }
-
-  .about__profile-birth {
-    margin-top: 5px;
-    font-size: .8rem;
+  .profile_name{
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+  }
+  .profile_birthday{
+    font-size: 0.8rem;
+  }
+  .profile_email{
+    font-size: 0.8rem;
+    margin-bottom: 15px;
   }
 
-  .about__profile-motto {
-    margin-top: 20px;
-    font-size: 1rem;
+  .profile_motto_text {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
     font-weight: bold;
     color: gray;
     -webkit-animation: bounce 1s alternate infinite;
@@ -72,21 +75,14 @@ export default {
             animation: bounce 1s alternate infinite;
   }
 
-  .about__profile-education {
-    margin-top: 3rem;
-
-    .about__profile-education__title {
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
-
-    .about__profile-education__text {
-      margin-bottom: 5px;
-      font-weight: bold;
-      font-size: 1.1rem;
-      color: gray;
-    }
+  .profile_contact{
+    margin-bottom: 5px;
   }
+
+  dd{
+    margin-right: 15px;
+    display:inline;
+    }
 }
 
 @-ms-keyframes bounce {
