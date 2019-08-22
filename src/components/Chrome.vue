@@ -103,7 +103,7 @@ export default {
 
 <style >
 @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
-*{font-family: 'Jeju Gothic', sans-serif;}
+.chrome{font-family: 'Jeju Gothic', sans-serif;}
   #chrome-pop-up {
     position: absolute;
     top: 40%;
