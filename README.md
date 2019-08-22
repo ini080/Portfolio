@@ -5,7 +5,7 @@
 
 ## 해야할일
 
-* Using Language 추가.
+* 시작메뉴 프로젝트들 추가.
 * Title bar , Start Bar 손보기
 * About Me
 * Project ( 사진 , 설명, 소스업로드)
