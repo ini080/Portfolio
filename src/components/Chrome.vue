@@ -13,7 +13,7 @@
             <i class="fab fa-chrome"></i>
           </span>
           <span class="text-tabs">{{title}}</span>
-          <span class="close-tabs">x</span>
+          <span class="close-tabs" @click="$emit('onClose')">x</span>
         </div>
         <div class="triangle-2"></div>
         <div class="new-tabs"></div>
