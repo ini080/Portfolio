@@ -234,8 +234,7 @@ import Icons_Left from '@/models/Icons_Left.js'
 import Icons_Right from '@/models/Icons_Right.js'
 import MetroTile from '../components/MetroTile.vue'
 import VueGridLayout from 'vue-grid-layout';
-import ProejctIcon from '../assets/project.svg';
-import OfficeIcon from '../assets/office.svg';
+
 import OneNoteIcon from '../assets/oneNote.svg';
 import PowerPointIcon from '../assets/powerPoint.svg';
 import CortanaIcon from '../assets/cortana.svg';
@@ -244,15 +243,15 @@ import WeatherIcon from '../assets/weather.svg';
 import SettingsIcon from '../assets/settings.svg';
 import PhotoIcon from '../assets/photo.svg';
 import CameraIcon from '../assets/camera.svg';
-import ExcelIcon from '../assets/excel.svg';
 import GithubIcon from '../assets/github.svg';
-import GrooveIcon from '../assets/groove.svg';
-import ChromeIcon from '../assets/chrome.svg';
 import AccessIcon from '../assets/access.svg';
+
+import ChromeIcon from '../assets/chrome.svg';
 import AlgorithmIcon from '../assets/algorithm.svg';
 import MailIcon from '../assets/email.svg';
 import AboutMeIcon from '../assets/aboutme.svg';
 import Achive from '../assets/achive.svg';
+import ProejctIcon from '../assets/project.svg';
 
 const BASE_LEN = 65;
 const MARGIN = 3;
@@ -265,7 +264,6 @@ export default {
     VueGridLayout,
     AboutMeIcon,
     ProejctIcon,
-    OfficeIcon,
     OneNoteIcon,
     PowerPointIcon,
     CortanaIcon,
@@ -274,9 +272,7 @@ export default {
     SettingsIcon,
     PhotoIcon,
     CameraIcon,
-    ExcelIcon,
     GithubIcon,
-    GrooveIcon,
     ChromeIcon,
     AccessIcon,
     AlgorithmIcon,
@@ -318,24 +314,22 @@ export default {
     rotateArray2: [-90, 90],
   }),
   methods: {
-    refreshTime() { // 시간과 날짜 1초마다 갱신
+    refreshTime() {
       setInterval(() => {
         this.time = this.format.getTime(null, 'kr')
         this.date = this.format.getDate(null, 'kr')
         this.ap = this.format.getAp(null, 'kr')
       }, 1000)
     },
-
-    onClose() { // 윈도우 닫기
+    onClose() {
       this.Chrome = false
     },
 
-    chromeClick(n) { // 단축아이콘 클릭 (0~7)
-      console.log(n)
+    chromeClick(n) {
       if (n == 15) {
-        window.open('https://github.com/ini080') // 깃허브 새창으로 열기
+        window.open('https://github.com/ini080')
       } else if( n == 17){
-        window.open('mailto:ini080@naver.com') // 메일 프로그램 연결
+        window.open('mailto:ini080@naver.com')
       } else{
         this.showChrome(n)
       }
@@ -363,8 +357,7 @@ export default {
       }
 
     },
-
-    Logout() { // 2.5초 후 부모에게 onLogin 이벤트 emit
+    Logout() {
       setTimeout(() => {
         this.$emit('onLogout')
       }, 1000)
@@ -373,10 +366,6 @@ export default {
       layoutItem.rotateX += rotateArray[this[rotateIndexName] % rotateArray.length];
       this[rotateIndexName] += 1;
     },
-    redirect() {
-      window.open(REPO_URL, '_blank');
-      // window.location.href = REPO_URL;
-    }
   },
   mounted() {
     this.interval1 = setInterval(
