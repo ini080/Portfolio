@@ -1,7 +1,7 @@
 <template>
 <div class="profile">
 
-  <img class="picture" src="../../public/folder.png" />
+  <img class="picture" src="../../public/picture.jpg" />
 
   <div class="profile_info">
     <dl>
@@ -35,7 +35,9 @@ export default {
     .picture {
         position: relative;
         left: -170px;
-        top: 30px;
+        top: 50px;
+        width: 200px;
+        height: auto;
         border: 5px solid #fff;
         border-radius: 50%;
         box-shadow: 0 0 10px rgba(0, 0, 0, .5);
@@ -43,7 +45,7 @@ export default {
     .profile_info {
         position: relative;
         left: 100px;
-        top: -220px;
+        top: -160px;
         font-size: 1rem;
         font-weight: bold;
     }
