@@ -1,7 +1,7 @@
 <template>
 <div class="chrome" id="chrome-pop-up">
   <div class="pop-up">
-    <title-bar @onClose="$emit('onClose')"></title-bar>
+
     <!-- Taskbar chrome-->
 
     <!-- Top -->
@@ -63,7 +63,6 @@
       </div>
     </div>
   </div>
-  <!-- 여기에 꾸며볼까?-->
   <about-view v-if="type == 0" />
   <project-view v-if="type == 1" />
   <activiti-vue v-if="type == 2" />
@@ -74,7 +73,6 @@
 
 
 <script>
-import Title from '@/components/TitleBar.vue'
 import AboutMe from '@/components/AboutMe.vue'
 import Project from '@/components/Project.vue'
 import Search from '@/components/Search.vue'
@@ -88,7 +86,6 @@ export default {
   },
 
   components: {
-    'title-bar': Title,
     'about-view': AboutMe,
     'project-view': Project,
     'search-vue': Search,
@@ -106,7 +103,10 @@ export default {
 
 <style >
 @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
-.chrome{font-family: 'Jeju Gothic', sans-serif;}
+.chrome{
+  font-family: 'Jeju Gothic', sans-serif;
+  border-radius: 10px 10px 0px 0px
+}
   #chrome-pop-up {
     position: absolute;
     top: 40%;
