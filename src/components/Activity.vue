@@ -2,18 +2,18 @@
   <div class="project">
     <div class="item" v-for="(item, index) in Achive" :key="index">
       <div class="item__title">{{ item.name }}</div>
+      <img class="item__image" v-if="index==0" src="@/assets/activity/capstone.jpg" height="300">
+
+      <img class="item__image" v-if="index==2" src="@/assets/activity/expert.png" height="300" width="90%">
+
       <div class="item__info">
-        <b class="item__info__text--blue">정보 </b>
         <div class="item__info__text">{{ item.info }}</div>
         <div class="item__info__text">{{ item.disc }}</div>
       </div>
       <div class="item__info">
-        <b class="item__info__text--blue">날짜</b>
+        <br>
         <div class="item__info__text">{{ item.date }}</div>
       </div>
-      <button class="item__more-button"
-        @click="showPage(item.link)"
-      >더보기</button>
     </div>
   </div>
 </template>
@@ -27,16 +27,6 @@ export default {
       Achive: Achive
     }
   },
-  computed: {
-
-  },
-  methods: {
-    showPage (url) {
-      if (url) {
-        window.open(url)
-      }
-    }
-  }
 }
 </script>
 
