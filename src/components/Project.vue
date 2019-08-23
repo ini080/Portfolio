@@ -5,8 +5,8 @@
       <img class="item__image" v-if="index==0" src="@/assets/project/AutoParking.jpg" height="300">
       <img class="item__image" v-if="index==1" src="@/assets/project/SmartBlind.png" height="300"  width="90%">
       <img class="item__image" v-if="index==2" src="@/assets/project/SafeFood.jpg" height="300"   width="80%">
-      <img class="item__image" v-if="index==3" src="@/assets/project/WebMobile.jpg" height="300">
-      <img class="item__image" v-if="index==4" src="@/assets/project/ChatBot.jpg" height="300"  width="80%" >
+      <img class="item__image" v-if="index==3" src="@/assets/project/ChatBot.jpg" height="300">
+      <img class="item__image" v-if="index==4" src="@/assets/project/WebMobile.jpg" height="300"  width="80%" >
       <div class="item__info">
         <br>
         <div class="item__info__text">{{ item.info }}</div>
