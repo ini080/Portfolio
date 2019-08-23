@@ -2,7 +2,11 @@
   <div class="project">
     <div class="item" v-for="(item, index) in project" :key="index">
       <div class="item__title">{{ item.name }}</div>
-      <img class="item__image" :src="item.img">
+      <img class="item__image" v-if="index==0" v-bind:src="autoparking" height="300" width="100%">
+      <img class="item__image" v-if="index==1" v-bind:src="smartblind" height="300"  width="100%">
+      <img class="item__image" v-if="index==2" v-bind:src="safefood" height="300"   width="100%">
+      <img class="item__image" v-if="index==3" v-bind:src="webmobile" height="300"   width="100%">
+      <img class="item__image" v-if="index==4" v-bind:src="chatbot" height="300">
       <div class="item__info">
         <b class="item__info__text--blue">정보 </b>
         <div class="item__info__text">{{ item.info }}</div>
@@ -25,7 +29,13 @@ import Project from '@/models/Project.js'
 export default {
   data () {
     return {
-      project: Project
+      project: Project,
+      autoparking : "https://github.com/ini080/public/blob/master/AutoParking.jpg?raw=true",
+      smartblind : "https://github.com/ini080/public/blob/master/SmartBlind.png?raw=true",
+      safefood : "https://github.com/ini080/public/blob/master/SafeFood.jpg?raw=true",
+      webmobile : "https://github.com/ini080/public/blob/master/WebMobile.PNG?raw=true",
+      chatbot : "https://github.com/ini080/public/blob/master/ChatBot.jpg?raw=true",
+
     }
   },
   computed: {

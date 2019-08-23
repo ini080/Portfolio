@@ -1,4 +1,4 @@
-const root = '@/assets/image/project/'
+const root = '/src/assets/image/project/'
 
 export default [
   {
