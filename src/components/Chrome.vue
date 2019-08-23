@@ -48,13 +48,16 @@
         </div>
         <div class="bookmarks">
           <div class="folder-book">
-            <a target="_blank" href=""><span>P</span> AboutMe</a>
+            <a href="#"><i class="fas fa-home"></i> Home</a>
           </div>
           <div class="folder-book">
-            <a target="_blank" href=""><i class="fab fa-css3-alt"></i> Portfolio</a>
+            <a href="#"><i class="fas fa-address-card"></i> About Me</a>
           </div>
           <div class="folder-book">
-            <a target="_blank" href=""><i class="fab fa-windows"></i> Home</a>
+            <a href="#"><i class="fas fa-folder-open"></i> Project</a>
+          </div>
+          <div class="folder-book">
+            <a href="#"><i class="fas fa-trophy"></i> Activity</a>
           </div>
         </div>
       </div>
