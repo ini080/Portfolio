@@ -63,7 +63,7 @@
   <!-- 여기에 꾸며볼까?-->
   <about-view v-if="type == 0" />
   <project-view v-if="type == 1" />
-  <achive-vue v-if="type == 2" />
+  <activiti-vue v-if="type == 2" />
   <algorithm-vue v-if="type == 14" />
   <search-vue v-if="type == 18" />
 </div>
@@ -76,7 +76,7 @@ import AboutMe from '@/components/AboutMe.vue'
 import Project from '@/components/Project.vue'
 import Search from '@/components/Search.vue'
 import Algorithm from '@/components/Algorithm'
-import Achive from '@/components/Achive'
+import Activity from '@/components/Activity'
 
 export default {
   props: {
@@ -90,7 +90,7 @@ export default {
     'project-view': Project,
     'search-vue': Search,
     'algorithm-vue': Algorithm,
-    'achive-vue': Achive,
+    'activiti-vue': Activity,
   },
 
   data() {

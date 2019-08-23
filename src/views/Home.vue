@@ -42,7 +42,7 @@
               <div slot="front">
                 <Achive style="fill: white" class="icon" />
                 <div class="tile-label">
-                  Achivement
+                  Activity
                 </div>
               </div>
             </template>

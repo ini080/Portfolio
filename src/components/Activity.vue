@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import Achive from '@/models/Achive.js'
+import Achive from '@/models/Activity.js'
 
 export default {
   data () {
