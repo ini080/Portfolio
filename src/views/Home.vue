@@ -349,7 +349,7 @@ export default {
         this.title = 'Chrome'
         this.Chrome = true
       } else if( n== 2 ){
-        this.title = "Achivement"
+        this.title = "Activity"
         this.Chrome = true
       }else {
         this.title = 'Unknown'
