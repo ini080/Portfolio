@@ -3,9 +3,9 @@
     <div class="item" v-for="(item, index) in Achive" :key="index">
       <div class="item__title">{{ item.name }}</div>
       <img class="item__image" v-if="index==0" src="@/assets/activity/capstone.jpg" height="300">
-      <img class="item__image" v-if="index==1" src="@/assets/activity/ssafy.jpg" height="300">
-      <img class="item__image" v-if="index==2" src="@/assets/activity/expert.png" height="300" width="90%">
-
+      <img class="item__image" v-if="index==1" src="@/assets/activity/ssafy.jpg" height="350">
+      <img class="item__image" v-if="index==2" src="@/assets/activity/expert.png" height="100" width="90%">
+      <img class="item__image" v-if="index==3" src="@/assets/activity/ssafy2.jpg" height="450" >
       <div class="item__info">
         <div class="item__info__text">{{ item.info }}</div>
         <div class="item__info__text">{{ item.disc }}</div>
