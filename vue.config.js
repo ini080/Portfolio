@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: '/ini080.github.io/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/dist' : '.',
   chainWebpack: config => {
     config.module
           .rule('svg')
