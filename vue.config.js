@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' ? '/jg-portfolio/' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/dist' : '.',
   chainWebpack: config => {
     config.module
           .rule('svg')
