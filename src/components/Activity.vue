@@ -3,7 +3,7 @@
     <div class="item" v-for="(item, index) in Achive" :key="index">
       <div class="item__title">{{ item.name }}</div>
       <img class="item__image" v-if="index==0" src="@/assets/activity/capstone.jpg" height="300">
-
+      <img class="item__image" v-if="index==1" src="@/assets/activity/ssafy.jpg" height="300">
       <img class="item__image" v-if="index==2" src="@/assets/activity/expert.png" height="300" width="90%">
 
       <div class="item__info">
