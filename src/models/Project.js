@@ -6,7 +6,7 @@ export default [
     'lang':'C언어',
     'img' : '',
     'date' : '2018.07',
-    'link' : '',
+    'link' : 'https://github.com/ini080/Arduino_AutoParking',
   },
   {
     'name' : '스마트 블라인드',
@@ -15,7 +15,7 @@ export default [
     'lang':'C언어',
     'img' : '',
     'date' : '2018.11',
-    'link' : '',
+    'link' : 'https://github.com/ini080/Arduino_SmartBlind',
   },
   {
     'name' : 'Safe_Food Project',
@@ -24,7 +24,7 @@ export default [
     'lang':'Java, Springboot, Vue.js, Mybatis, Mysql',
     'img' : '',
     'date' : '2019.05',
-    'link' : '',
+    'link' : 'https://github.com/ini080/Safe_Food',
   },
   {
     'name' : 'WebMobile Project',
@@ -33,7 +33,7 @@ export default [
     'lang':'Java, Springboot, Firebase, Vue.js',
     'img' : '',
     'date' : '2019.08',
-    'link' : '',
+    'link' : 'https://github.com/ini080/web-Mobile-Final',
   },
   {
     'name' : '다솜봇 카카오톡 챗봇',
@@ -41,8 +41,8 @@ export default [
     'disc' : '여러 API를 사용하여 원하는 대답을 해주는 카카오톡 챗봇입니다.',
     'lang':'Node.Js , Firebase',
     'img' : '',
-    'date' : '',
-    'link' : '2019.07',
+    'date' : '2019.07',
+    'link' : 'https://github.com/ini080/chatbot'
   },
 
 ]
