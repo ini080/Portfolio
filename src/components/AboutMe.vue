@@ -9,8 +9,8 @@
       <dt class="profile_birthday">1994.04.26</dt>
       <dt class="profile_email">ini080@naver.com</dt>
       <dt class="profile_motto">좌우명</dt>
-      <dt class="profile_motto_text">백문이 불여일타</dt>
-      <dt class="profile_contact">Contact Me!</dt>
+      <dt class="animated heartBeat profile_motto_text">백문이 불여일타</dt>
+      <dt class="profile_contact">Contact Me😍</dt>
       <dd><a href="#" @click="onClick(1)"><i class="fas fa-envelope fa-2x"></i></a></dd>
       <dd><a href="#" @click="onClick(2)"><i class="fab fa-github-alt fa-2x"></i></a></dd>
       <dd><a href="#"  @click="onClick(3)"><i class="fas fa-mobile fa-2x"></i></a></dd>
@@ -47,7 +47,7 @@ export default {
     .picture {
         position: relative;
         left: -170px;
-        top: 50px;
+        top: 65px;
         width: 200px;
         height: auto;
         border: 5px solid #fff;
@@ -70,28 +70,22 @@ export default {
     }
     .profile_email {
         font-size: 0.8rem;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
 
     .profile_motto_text {
         margin-top: 5px;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         font-size: 1.2rem;
         font-weight: bold;
-        color: gray;
-        -webkit-animation: bounce 1s alternate infinite;
-        -moz-animation: bounce 1s alternate infinite;
-        -ms-animation: bounce 1s alternate infinite;
-        -o-animation: bounce 1s alternate infinite;
-        animation: bounce 1s alternate infinite;
     }
 
     .profile_contact {
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
 
     dd {
-        margin-right: 20px;
+        margin-right: 25px;
         display: inline;
     }
     a:link {
@@ -109,113 +103,72 @@ export default {
 
 }
 
-@-ms-keyframes bounce {
-    0% {
-        color: red;
-    }
 
-    25% {
-        color: orange;
-    }
+@-webkit-keyframes heartBeat {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 
-    50% {
-        color: green;
-    }
+  14% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
 
-    75% {
-        color: blue;
-    }
-    100% {
-        -ms-transform: scale(1.1);
-        color: purple;
-    }
+  28% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  42% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+
+  70% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
 
-@-o-keyframes bounce {
-    0% {
-        color: red;
-    }
+@keyframes heartBeat {
+  0% {
+    color: red;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 
-    25% {
-        color: orange;
-    }
+  14% {
 
-    50% {
-        color: green;
-    }
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
 
-    75% {
-        color: blue;
-    }
-    100% {
-        -o-transform: scale(1.1);
-        color: purple;
-    }
+  28% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  42% {
+    color: blue;
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+
+  70% {
+    color:green;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
 
-@-moz-keyframes bounce {
-    0% {
-        color: red;
-    }
-
-    25% {
-        color: orange;
-    }
-
-    50% {
-        color: green;
-    }
-
-    75% {
-        color: blue;
-    }
-    100% {
-        -moz-transform: scale(1.1);
-        color: purple;
-    }
-}
-
-@-webkit-keyframes bounce {
-    0% {
-        color: red;
-    }
-
-    25% {
-        color: orange;
-    }
-
-    50% {
-        color: green;
-    }
-
-    75% {
-        color: blue;
-    }
-    100% {
-        -webkit-transform: scale(1.1);
-        color: purple;
-    }
-}
-
-@keyframes bounce {
-    0% {
-        color: red;
-    }
-
-    25% {
-        color: orange;
-    }
-
-    50% {
-        color: green;
-    }
-
-    75% {
-        color: blue;
-    }
-    100% {
-        transform: scale(1.1);
-        color: purple;
-    }
+.heartBeat {
+  -webkit-animation-name: heartBeat;
+  animation-name: heartBeat;
+  -webkit-animation-duration: 1.3s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count:infinite;
 }
 </style>

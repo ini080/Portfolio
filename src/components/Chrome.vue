@@ -103,6 +103,16 @@ export default {
 
 <style >
 @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+@font-face {
+  font-family: 'ymB';
+  src: url("../assets/font/ymB.ttf") format('truetype')
+}
+
+@font-face {
+  font-family: 'ymL';
+  src: url("../assets/font/ymL.ttf") format('truetype')
+}
+
 .chrome{
   font-family: 'Jeju Gothic', sans-serif;
   border-radius: 15px 15px 0px 0px
@@ -439,67 +449,77 @@ export default {
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  .item_title {
+    font-family: 'ymB';
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: blue;
+  }
 
-  .item__more-button {
-    cursor: pointer;
-    outline: none;
+  .item_content {
+    font-family: 'ymL';
+    font-size: 18px;
+  }
+
+  .item_info {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .item_date {
+    font-size: 15px;
+  }
+
+  .fun-btn {
+    /* change bg color to get different hues    */
+    background-color: salmon;
+    color: white;
+    padding: 1em 2em;
     border: none;
+    transition: all .3s ease;
     border-radius: 5px;
-    margin-top: 10px;
-    padding: 5px 10px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
-    -webkit-transition: $transition-duration;
-       -moz-transition: $transition-duration;
-        -ms-transition: $transition-duration;
-         -o-transition: $transition-duration;
-            transition: $transition-duration;
-
-    &:hover {
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-    }
-  }
-
-  .item__title {
-    margin: 10px 0;
-    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    outline: none;
+    align-self: center;
+    cursor: pointer;
     font-weight: bold;
-    color: dodgerblue;
   }
 
-  .item__image {
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  .fun-btn:hover {
+    animation: random-bg .5s linear infinite, grow 1300ms ease infinite;
+  }
 
-    @media only screen and (min-width: 320px), (max-width: 768px) {
-      width: 80%;
-      height: 50%;
+  .start-fun {
+    background-color: #fff !important;
+    /* change color of button text when fun is started   */
+    color: salmon !important;
+  }
+
+  /* pulsating effect on button */
+  @keyframes grow {
+    0% {
+      transform: scale(1);
     }
 
-    @media only screen and (min-width: 1224px) {
-      width: 50%;
-      height: 30%;
+    14% {
+      transform: scale(1.3);
+    }
+
+    28% {
+      transform: scale(1);
+    }
+
+    42% {
+      transform: scale(1.3);
+    }
+
+    70% {
+      transform: scale(1);
     }
   }
 
-  .item__info {
-    margin: 10px 0px;
 
-    .item__info__text {
-      padding: 5px;
-    }
-
-    .item__info__text--blue {
-      color: dodgerblue;
-    }
-  }
-
-  .item__used-language {
-    padding: 0;
-    margin: 10px 0;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: gray;
-  }
-}
 
   </style>

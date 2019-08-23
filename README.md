@@ -9,3 +9,8 @@
 * Title bar , Start Bar 손보기
 * Project ( 사진 , 설명, 소스업로드)
 * Algorithm
+
+
+# Copyright
+
+Theme - vue-metro-tile [link](https://github.com/yuanfux/vue-metro-tile)
