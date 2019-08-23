@@ -4,7 +4,7 @@
   <div class="title">
     JG Portfolio
   </div>
-  <div class="subtitle">
+  <div class="subtitle ">
     Made By Vue.js
   </div>
 
@@ -23,7 +23,7 @@
             <template v-if="item.i === '0'" >
               <div slot="front">
                 <AboutMeIcon style="fill: white" class="icon" />
-                <div class="tile-label">
+                <div class="tile-label animated pulse">
                   About Me
                 </div>
               </div>
@@ -32,7 +32,7 @@
             <template v-else-if="item.i === '1'">
               <div slot="front">
                 <ProejctIcon style="fill: white" class="icon" />
-                <div class="tile-label">
+                <div class="tile-label  animated pulse">
                   Project
                 </div>
               </div>
@@ -41,7 +41,7 @@
             <template v-else-if="item.i === '2'">
               <div slot="front">
                 <Achive style="fill: white" class="icon" />
-                <div class="tile-label">
+                <div class="tile-label animated pulse">
                   Activity
                 </div>
               </div>
@@ -163,7 +163,7 @@
             </template>
             <template v-else-if="item.i === '14'">
               <div slot="front">
-                <div class="tile-label">
+                <div class="tile-label  animated pulse">
                   Algorithms
                 </div>
                 <AlgorithmIcon class="icon" />
@@ -171,7 +171,7 @@
             </template>
             <template v-else-if="item.i === '15'">
               <div slot="front">
-                <div class="tile-label">
+                <div class="tile-label animated pulse">
                   View Source on GitHub
                 </div>
                 <GithubIcon style="fill: white" class="icon" />
@@ -193,7 +193,7 @@
             </template>
             <template v-else-if="item.i === '17'">
               <div slot="front">
-                <div class="tile-label">
+                <div class="tile-label animated pulse">
                   Mail
                 </div>
                 <MailIcon style="fill: white" class="icon" />
@@ -201,7 +201,7 @@
             </template>
             <template v-else-if="item.i === '18'">
               <div slot="front">
-                <div class="tile-label">
+                <div class="tile-label animated pulse">
                   Google Chrome
                 </div>
                 <ChromeIcon class="icon" />
@@ -388,6 +388,18 @@ export default {
 </script>
 
 <style lang="scss">
+
+@font-face {
+  font-family: 'ymB';
+  src: url("../assets/font/ymB.ttf") format('truetype')
+}
+
+@font-face {
+  font-family: 'ymL';
+  src: url("../assets/font/ymL.ttf") format('truetype')
+}
+
+
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -402,7 +414,7 @@ body {
 
 .title {
   margin-top: 1.5%;
-  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: "ymB";
   font-size: 40px;
   font-weight: 500;
   padding: 0 0 0 0;
@@ -410,7 +422,7 @@ body {
 }
 
 .subtitle {
-  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: "ymL";
   font-size: 15px;
   font-weight: 500;
   padding-bottom: 20px;
@@ -525,5 +537,47 @@ body {
 }
 
 
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    color: black;
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 2s;
+    animation-duration: 1.7s;
+    -webkit-animation-iteration-count:infinite;
+}
 
 </style>
