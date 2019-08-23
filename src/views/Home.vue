@@ -188,7 +188,7 @@
                 <div class="tile-label">
                   Angular
                 </div>
-                <img src="../assets/angular.png" class="image" />
+                <img src="@/assets/svg//angular.png" class="image" />
               </div>
             </template>
             <template v-else-if="item.i === '17'">
@@ -235,23 +235,23 @@ import Icons_Right from '@/models/Icons_Right.js'
 import MetroTile from '../components/MetroTile.vue'
 import VueGridLayout from 'vue-grid-layout';
 
-import OneNoteIcon from '../assets/oneNote.svg';
-import PowerPointIcon from '../assets/powerPoint.svg';
-import CortanaIcon from '../assets/cortana.svg';
-import StoreIcon from '../assets/store.svg';
-import WeatherIcon from '../assets/weather.svg';
-import SettingsIcon from '../assets/settings.svg';
-import PhotoIcon from '../assets/photo.svg';
-import CameraIcon from '../assets/camera.svg';
-import GithubIcon from '../assets/github.svg';
-import AccessIcon from '../assets/access.svg';
+import OneNoteIcon from '@/assets/svg/oneNote.svg';
+import PowerPointIcon from '@/assets/svg/powerPoint.svg';
+import CortanaIcon from '@/assets/svg/cortana.svg';
+import StoreIcon from '@/assets/svg//store.svg';
+import WeatherIcon from '@/assets/svg/weather.svg';
+import SettingsIcon from '@/assets/svg/settings.svg';
+import PhotoIcon from '@/assets/svg/photo.svg';
+import CameraIcon from '@/assets/svg/camera.svg';
+import GithubIcon from '@/assets/svg/github.svg';
+import AccessIcon from '@/assets/svg/access.svg';
 
-import ChromeIcon from '../assets/chrome.svg';
-import AlgorithmIcon from '../assets/algorithm.svg';
-import MailIcon from '../assets/email.svg';
-import AboutMeIcon from '../assets/aboutme.svg';
-import Achive from '../assets/achive.svg';
-import ProejctIcon from '../assets/project.svg';
+import ChromeIcon from '@/assets/svg/chrome.svg';
+import AlgorithmIcon from '@/assets/svg/algorithm.svg';
+import MailIcon from '@/assets/svg/email.svg';
+import AboutMeIcon from '@/assets/svg/aboutme.svg';
+import Achive from '@/assets/svg/achive.svg';
+import ProejctIcon from '@/assets/svg/project.svg';
 
 const BASE_LEN = 65;
 const MARGIN = 3;

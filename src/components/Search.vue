@@ -2,7 +2,7 @@
   <div id="browser">
     <div class="browser__google-image-area">
       <img class="browser__google-image-area__image"
-        src="@/assets/google.png"
+        src="@/assets/svg/google.png"
       >
     </div>
     <div class="browser__search-area">
