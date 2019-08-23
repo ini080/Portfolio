@@ -34,7 +34,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/assets/style/common.scss";
 
 #browser {
   width: 100%;
@@ -68,7 +67,7 @@ export default {
 
     .browser__google-image-area__image {
       width: 20rem;
-      margin: 7rem 0 3rem 0;
+      margin: 4rem 0 3rem 0;
     }
   }
 
@@ -79,11 +78,11 @@ export default {
       border: 1px solid lightgray;
       border-radius: 2px;
       outline: none;
-      width: 16rem;
+      width: 20rem;
       height: 1.6rem;
       padding: 5px;
       box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
-      transition: $transition-duration;
+      transition: .3s;
 
       &:focus, &:hover {
         box-shadow: 2px 2px 5px rgba(0, 0, 0, .4);
