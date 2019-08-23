@@ -19,7 +19,7 @@
       </div>
       <br>
       <button class="item__more-button"
-        @click="showPage(item.link)"
+        @click="showPage(item.link,index)"
       >더보기</button>
     </div>
   </div>
@@ -38,10 +38,17 @@ export default {
 
   },
   methods: {
-    showPage (url) {
-      if (url) {
-        window.open(url)
+    showPage (url,idx) {
+      if(idx==0){
+        window.open('https://youtu.be/ubBWLg_unf4')
+      }else if( idx == 1){
+        window.open('https://youtu.be/3QlQ6UJwFwA')
+      }else{
+        if (url) {
+          window.open(url)
+        }
       }
+
     }
   }
 }
