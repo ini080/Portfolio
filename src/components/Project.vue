@@ -3,7 +3,7 @@
     <div class="item" v-for="(item, index) in project" :key="index">
       <div class="item__title">{{ item.name }}</div>
       <img class="item__image" v-if="index==0" v-bind:src="autoparking" height="300">
-      <img class="item__image" v-if="index==1" v-bind:src="smartblind" height="300"  width="100%">
+      <img class="item__image" v-if="index==1" v-bind:src="smartblind" height="300"  width="90%">
       <img class="item__image" v-if="index==2" v-bind:src="safefood" height="300"   width="100%">
       <img class="item__image" v-if="index==3" v-bind:src="chatbot" height="300">
       <img class="item__image" v-if="index==4" v-bind:src="webmobile" height="300"   >
@@ -64,6 +64,8 @@ export default {
 }
 
 .item__title{
+  font-size: 2rem;
+  margin-bottom: 10px;
   color: blue;
 }
 </style>
