@@ -105,7 +105,7 @@ export default {
 @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
 .chrome{
   font-family: 'Jeju Gothic', sans-serif;
-  border-radius: 10px 10px 0px 0px
+  border-radius: 15px 15px 0px 0px
 }
   #chrome-pop-up {
     position: absolute;
