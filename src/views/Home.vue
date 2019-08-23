@@ -544,8 +544,8 @@ body {
   }
 
   50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
+    -webkit-transform: scale3d(1.15, 1.15, 1.15);
+    transform: scale3d(1.15, 1.15, 1.15);
   }
 
   to {
@@ -561,9 +561,8 @@ body {
   }
 
   50% {
-    color: black;
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
+    -webkit-transform: scale3d(1.15, 1.15, 1.15);
+    transform: scale3d(1.15, 1.15, 1.15);
   }
 
   to {
@@ -576,7 +575,7 @@ body {
   -webkit-animation-name: pulse;
   animation-name: pulse;
   -webkit-animation-duration: 2s;
-    animation-duration: 1.7s;
+    animation-duration: 2s;
     -webkit-animation-iteration-count:infinite;
 }
 
