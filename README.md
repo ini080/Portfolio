@@ -1,6 +1,6 @@
 
 <div align="center">
-  <div style="font-size : 100px">Portfolio</div>
+  <div style="font-size : 300px">Portfolio</div>
     <h1>Made By Vue.js 😃</h1>
     <img src="https://t1.daumcdn.net/cfile/tistory/99FE6F445A5615D02F" width="360px">
     <br>
