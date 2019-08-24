@@ -300,6 +300,7 @@ export default {
 }
 
 .taskbar .icons-right .datetime {
+  font-family: "ymL";
   display: table-cell;
   width: 70px !important;
   cursor: pointer;
@@ -309,8 +310,9 @@ export default {
 .taskbar .icons-right .datetime span {
   display: block;
   text-align: center;
-  margin-top: 3px;
-  font-size: 11.3px;
+  margin-left: 5px;
+  margin-top: 5px;
+  font-size: 10px;
   color: white;
 }
 
@@ -464,7 +466,7 @@ export default {
 }
 
 .start-menu-modal #others .box-others {
-  
+
   display: inline-flex;
   padding-left: 20px;
   flex-wrap: wrap;

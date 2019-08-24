@@ -381,9 +381,7 @@ export default {
     border-radius: 3px;
   }
 
-  .chrome-bottom .options-bar .points-bar:hover {
-    background: rgba(128, 128, 128, 0.2);
-  }
+  
 
   .chrome-bottom .bookmarks {
     float: left;

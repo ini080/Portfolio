@@ -22,7 +22,7 @@
 
             <template v-if="item.i === '0'" >
               <div slot="front">
-                <AboutMeIcon style="fill: white" class="icon" />
+                <AboutMeIcon style="fill: white" class="icon animated pulse" />
                 <div class="tile-label animated pulse">
                   About Me
                 </div>
@@ -31,7 +31,7 @@
 
             <template v-else-if="item.i === '1'">
               <div slot="front">
-                <ProejctIcon style="fill: white" class="icon" />
+                <ProejctIcon style="fill: white" class="icon animated pulse" />
                 <div class="tile-label  animated pulse">
                   Project
                 </div>
@@ -40,7 +40,7 @@
 
             <template v-else-if="item.i === '2'">
               <div slot="front">
-                <Achive style="fill: white" class="icon" />
+                <Achive style="fill: white" class="icon animated pulse" />
                 <div class="tile-label animated pulse">
                   Activity
                 </div>
@@ -166,7 +166,7 @@
                 <div class="tile-label  animated pulse">
                   Algorithms
                 </div>
-                <AlgorithmIcon class="icon" />
+                <AlgorithmIcon class="icon animated pulse" />
               </div>
             </template>
             <template v-else-if="item.i === '15'">
@@ -174,7 +174,7 @@
                 <div class="tile-label animated pulse">
                   View Source on GitHub
                 </div>
-                <GithubIcon style="fill: white" class="icon" />
+                <GithubIcon style="fill: white" class="icon animated pulse" />
               </div>
             </template>
             <template v-else-if="item.i === '16'">
@@ -196,7 +196,7 @@
                 <div class="tile-label animated pulse">
                   Mail
                 </div>
-                <MailIcon style="fill: white" class="icon" />
+                <MailIcon style="fill: white" class="icon animated pulse" />
               </div>
             </template>
             <template v-else-if="item.i === '18'">
@@ -204,7 +204,7 @@
                 <div class="tile-label animated pulse">
                   Google Chrome
                 </div>
-                <ChromeIcon class="icon" />
+                <ChromeIcon class="icon animated pulse" />
               </div>
             </template>
             <template v-else-if="item.i === '19'">
