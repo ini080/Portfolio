@@ -1,16 +1,16 @@
 # Portfolio
 
 <div align="center">
-  <img src="https://t1.daumcdn.net/cfile/tistory/99FE6F445A5615D02F" width="240px">
+  <img src="https://t1.daumcdn.net/cfile/tistory/99FE6F445A5615D02F" width="360px">
   <h1>Made By Vue.js</h1>
 </div>
 
-### Link  
+# Link  
 
-See [JG_Portfolio](https://http://13.124.104.44:8080/)
+See [JG_Portfolio](http://13.124.104.44:8080/)
 
 
-### ScreenShot
+# ScreenShot
 ![screensh](./ScreenShot/Login1.jpg)  
 ![screensh](./ScreenShot/Login2.jpg)  
-![screensh](./ScreenShot/Login3.jpg)  
+![screensh](./ScreenShot/HOME.png)  
