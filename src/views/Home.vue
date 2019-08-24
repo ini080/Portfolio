@@ -413,7 +413,7 @@ body {
 }
 
 .title {
-  margin-top: 1.5%;
+  margin-top: 4%;
   font-family: "ymB";
   font-size: 40px;
   font-weight: 500;
@@ -422,6 +422,7 @@ body {
 }
 
 .subtitle {
+  margin-top: 5px;
   font-family: "ymL";
   font-size: 15px;
   font-weight: 500;
