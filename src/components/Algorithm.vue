@@ -1,9 +1,9 @@
 <template>
 <div class="project">
   <div class="view">
-    <button :class="[ user_type === 'all' ? 'selected button' : 'button']" @click="update_source('all')">All</button>
-    <button :class="[ user_type === 'BOJ' ? 'selected button' : 'button']" @click="update_source('BOJ')">BOJ</button>
-    <button :class="[ user_type === 'SWexpert' ? 'selected button' : 'button']" @click="update_source('SWexpert')">SWexpert</button>
+    <button :class="[ user_type === 'all' ? 'selected item_button' : 'item_button']" @click="update_source('all')">All</button>
+    <button :class="[ user_type === 'BOJ' ? 'selected item_button' : 'item_button']" @click="update_source('BOJ')">BOJ</button>
+    <button :class="[ user_type === 'SWexpert' ? 'selected item_button' : 'item_button']" @click="update_source('SWexpert')">SWexpert</button>
 
     <div v-if="user_type == 'all'">
       <div v-for="item in Algorithm">
@@ -119,16 +119,9 @@ export default {
             transform: skewY(-45deg) translateX(12.5em);
   }
 }
-.wrapper {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
 
-.button {
+
+.item_button {
   margin-left: 6px;
   margin-top: 20px;
   padding: 0.25em 1.5em;
@@ -143,7 +136,7 @@ export default {
   position: relative;
   overflow: hidden;
 }
-.button:before {
+.item_button:before {
   content: "";
   background-color: rgba(255, 255, 255, 0.5);
   height: 100%;
@@ -156,12 +149,12 @@ export default {
           transform: skewX(-45deg) translateX(0);
   transition: none;
 }
-.button:hover {
+.item_button:hover {
   background-color: #2194E0;
   color: #fff;
   border-bottom: 4px solid #1977b5;
 }
-.button:hover:before {
+.item_button:hover:before {
   -webkit-transform: skewX(-45deg) translateX(13.5em);
           transform: skewX(-45deg) translateX(13.5em);
   transition: all 0.5s ease-in-out;
