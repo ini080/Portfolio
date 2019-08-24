@@ -1,67 +1,76 @@
 <template>
-  <div class="project">
-    알고리즘
+<div class="project">
+  <div class="view">
+    <button :class="[ user_type === 'all' ? 'selected button' : 'button']" @click="update_source('all')">All</button>
+    <button :class="[ user_type === 'BOJ' ? 'selected button' : 'button']" @click="update_source('BOJ')">BOJ</button>
+    <button :class="[ user_type === 'SWexpert' ? 'selected button' : 'button']" @click="update_source('SWexpert')">SWexpert</button>
 
-    <div id="app">
-   <div class="view">
-     <button :class="[ user_type === 'all' ? 'selected' : '']" @click="update_source('all')">All</button>
-     <button :class="[ user_type === 'BOJ' ? 'selected' : '']" @click="update_source('BOJ')">BOJ</button>
-     <button :class="[ user_type === 'SWexpert' ? 'selected' : '']" @click="update_source('SWexpert')">SWexpert</button>
-   </div>
-   <div v-for="algo in Algorithm" v-if="(algo.type === 'BOJ') || (user_type == 'all') ">
+    <div v-if="user_type == 'all'">
+      <div v-for="item in Algorithm">
+        <div class="item">
+          <div class="item_title">{{ item.name }}
+            <div>{{item.site}} {{item.number}}</div>
+          </div>
 
-   <div class="tweet">
-      <div class="box">
-        <article class="media">
-          <div class="media-left">
+          <div><strong class="item_disc">{{ item.disc }}</strong></div>
+          <div>{{item.type}}</div>
+          <div>{{item.date}}</div>
+          <button class="fun-btn" @click="onClick(item.link)">풀러가기</button>
+        </div>
+      </div>
+    </div>
+
+    <div v-else-if="user_type =='BOJ'">
+      <div class="" v-for="item in Algorithm" v-if="item.site =='BOJ'">
+        <div class="item">
+          <div class="item_title">{{ item.name }}
+            <div>{{item.site}} {{item.number}}</div>
           </div>
-          <div class="media-content">
-            <div class="content">
-              <p><strong>{{algo.name}}</strong> <small></small></p>
-            </div>
+
+          <div><strong class="item_disc">{{ item.disc }}</strong></div>
+          <div>{{item.type}}</div>
+          <div>{{item.date}}</div>
+          <button class="fun-btn" @click="onClick(item.link)">풀러가기</button>
+        </div>
+      </div>
+    </div>
+
+    <div v-else-if="user_type =='SWexpert'">
+      <div class="" v-for="item in Algorithm" v-if="item.site =='SWexpert'">
+        <div class="item">
+          <div class="item_title">{{ item.name }}
+            <div>{{item.site}} {{item.number}}</div>
           </div>
-        </article>
+
+          <div><strong class="item_disc">{{ item.disc }}</strong></div>
+          <div>{{item.type}}</div>
+          <div>{{item.date}}</div>
+          <button class="fun-btn" @click="onClick(item.link)">풀러가기</button>
+        </div>
       </div>
     </div>
   </div>
 
-  <div v-for="algo in Algorithm" v-if="(algo.type === 'SWexpert') || (user_type == 'all') ">
-
-  <div class="tweet">
-     <div class="box">
-       <article class="media">
-         <div class="media-left">
-         </div>
-         <div class="media-content">
-           <div class="content">
-             <p><strong>{{algo.type}}{{algo.name}}</strong> <small></small></p>
-           </div>
-         </div>
-       </article>
-     </div>
-   </div>
- </div>
-
- </div>
-
-    </div>
+</div>
 </template>
 
 <script>
-import Algorithms from '@/models/Algorithm.js'
+import Algorithm from '@/models/Algorithm.js'
 
 export default {
-  data () {
+  data() {
     return {
-      Algorithm: Algorithms,
-      user_type : 'all',
+      Algorithm: Algorithm,
+      user_type: 'all',
     }
   },
-  components: {
-  },
-  methods:{
-    update_source(user_type){
+  components: {},
+  methods: {
+    update_source(user_type) {
       this.user_type = user_type;
+    },
+    onClick(url) {
+      window.open(url)
     }
   }
 
@@ -69,66 +78,93 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css?family=Muli:400,800");
-#body {
-  height: 100%;
-  background: #e6ecf1;
-  font-family: 'Muli', sans-serif;
+@font-face {
+  font-family: 'ymB';
+  src: url("../assets/font/ymB.ttf") format('truetype')
 }
 
-strong {
-  font-weight: 800;
+@font-face {
+  font-family: 'ymL';
+  src: url("../assets/font/ymL.ttf") format('truetype')
 }
 
-p {
-  line-height: 1.2;
-}
-p + p {
-  margin-top: 5px;
+.item_title div {
+  font-size: 15px;
+  color: gray;
 }
 
-button {
-  background-color: #43c594;
-  border: 0;
-  color: #fff;
-  padding: 15px 20px;
-  font-size: 18px;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-button:focus {
-  outline: none;
-}
-button.selected {
-  background-color: #2c8f6a;
+.fun-btn{
+  padding: 0 0 0 0;
+  text-align: center;
+  margin-top: 10px;
 }
 
-
-.view {
-  margin-bottom: 20px;
+@-webkit-keyframes sheen {
+  0% {
+    -webkit-transform: skewY(-45deg) translateX(0);
+            transform: skewY(-45deg) translateX(0);
+  }
+  100% {
+    -webkit-transform: skewY(-45deg) translateX(12.5em);
+            transform: skewY(-45deg) translateX(12.5em);
+  }
 }
-.view button + button {
+@keyframes sheen {
+  0% {
+    -webkit-transform: skewY(-45deg) translateX(0);
+            transform: skewY(-45deg) translateX(0);
+  }
+  100% {
+    -webkit-transform: skewY(-45deg) translateX(12.5em);
+            transform: skewY(-45deg) translateX(12.5em);
+  }
+}
+.wrapper {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.button {
   margin-left: 6px;
+  margin-top: 20px;
+  padding: 0.25em 1.5em;
+  text-align: center;
+  text-decoration: none;
+  color: #2194E0;
+  border: 2px solid #2194E0;
+  font-size: 24px;
+  display: inline-block;
+  border-radius: 0.3em;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+.button:before {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 100%;
+  width: 3em;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -4.5em;
+  -webkit-transform: skewX(-45deg) translateX(0);
+          transform: skewX(-45deg) translateX(0);
+  transition: none;
+}
+.button:hover {
+  background-color: #2194E0;
+  color: #fff;
+  border-bottom: 4px solid #1977b5;
+}
+.button:hover:before {
+  -webkit-transform: skewX(-45deg) translateX(13.5em);
+          transform: skewX(-45deg) translateX(13.5em);
+  transition: all 0.5s ease-in-out;
 }
 
-.tweet {
-  background-color: #fff;
-  color: #373737;
-  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-  padding: 30px;
-}
-.tweet + .tweet {
-  margin-top: 20px;
-}
-.tweet .media {
-  display: flex;
-}
-.tweet img {
-  width: 64px;
-  margin-right: 15px;
-}
-.tweet small {
-  font-size: 14px;
-  color: #657786;
-}
 </style>

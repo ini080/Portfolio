@@ -471,7 +471,7 @@ export default {
     /* change bg color to get different hues    */
     background-color: salmon;
     color: white;
-    padding: 1em 2em;
+    padding: 0.7em 1.5em;
     border: none;
     transition: all .3s ease;
     border-radius: 5px;
