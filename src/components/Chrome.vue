@@ -381,8 +381,6 @@ export default {
     border-radius: 3px;
   }
 
-  
-
   .chrome-bottom .bookmarks {
     float: left;
     flex: 0 0 24%;
