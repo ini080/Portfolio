@@ -16,9 +16,9 @@ export default [
   },
   {
     'name' : 'Safe_Food Project',
-    'info' : 'Java + Springboot + Mysql + Mybatis + Vue.js',
+    'info' : 'Java + JSP + Springboot + Mysql + Mybatis + Vue.js',
     'disc' : '안전한 먹거리를 제공하는 프로젝트입니다.',
-    'text' : 'Back-End & Front-End, 회원관리, 회원별 알레르기에 맞는 음식추천',
+    'text' : 'MVC 모델 사용 , 회원관리, 회원별 알레르기에 맞는 음식추천',
     'date' : '2019.05',
     'link' : 'https://github.com/ini080/Safe_Food',
   },
