@@ -44,20 +44,20 @@
     <div id="apps">
       <a class="category" href="#">My Skill</a>
       <div class="category">Language</div>
-      <a href="#"><img src="http://icons.iconarchive.com/icons/alecive/flatwoken/256/Apps-Java-icon.png" alt="Java"> <span>Java</span></a>
-      <a href="#"><img src="https://antoineguillot.files.wordpress.com/2016/07/learn-javascript.png?w=344" alt="JavaScript"> <span>JavaScript</span></a>
-      <a href="#"><img src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/256/full/nodejslogo.png" alt="Node.js"> <span>Node.js</span></a>
+      <a href="#"><img src="http://icons.iconarchive.com/icons/alecive/flatwoken/256/Apps-Java-icon.png" alt="Java"> <span class="cate_text">Java</span></a>
+      <a href="#"><img src="https://antoineguillot.files.wordpress.com/2016/07/learn-javascript.png?w=344" alt="JavaScript"> <span class="cate_text">JavaScript</span></a>
+      <a href="#"><img src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/256/full/nodejslogo.png" alt="Node.js"> <span class="cate_text">Node.js</span></a>
       <div class="category">FrameWork</div>
-      <a href="#"><img src="https://cdn-images-1.medium.com/max/1200/1*yeAO-nwsAqnzr7k-zoDkoQ.png" alt="Vue.js"> <span>Vue.js</span></a>
-      <a href="#"><img src="https://spring.io/img/homepage/icon-spring-cloud.svg" alt="Spring"> <span>Spring</span></a>
-      <a href="#"><img src="https://spring.io/img/homepage/icon-spring-boot.svg" alt="SpringBoot"> <span>SpringBoot</span></a>
-      <a href="#"><img src="https://t1.daumcdn.net/cfile/tistory/9961453359A449F403" alt="Mybatis"> <span>Mybatis</span></a>
+      <a href="#"><img src="https://cdn-images-1.medium.com/max/1200/1*yeAO-nwsAqnzr7k-zoDkoQ.png" alt="Vue.js"> <span class="cate_text">Vue.js</span></a>
+      <a href="#"><img src="https://spring.io/img/homepage/icon-spring-cloud.svg" alt="Spring"> <span class="cate_text">Spring</span></a>
+      <a href="#"><img src="https://spring.io/img/homepage/icon-spring-boot.svg" alt="SpringBoot"> <span class="cate_text">SpringBoot</span></a>
+      <a href="#"><img src="https://t1.daumcdn.net/cfile/tistory/9961453359A449F403" alt="Mybatis"> <span class="cate_text">Mybatis</span></a>
       <div class="category">DB</div>
-      <a href="#"><img src="https://cdn1.iconfinder.com/data/icons/programing-development-7/24/mysql_database_logo_data_base-512.png" alt="Mysql"> <span>Mysql</span></a>
-      <a href="#"><img src="https://4.bp.blogspot.com/-Fxo_qnGJBj0/WRoDPNdlEII/AAAAAAAABF0/1mSHmv5gleQaCsHKEDgTB3DbNghjCXvZACLcB/s1600/logo_firebase_1920px_clr.png" alt="Firebase"> <span>Firebase</span></a>
+      <a href="#"><img src="https://cdn1.iconfinder.com/data/icons/programing-development-7/24/mysql_database_logo_data_base-512.png" alt="Mysql"> <span class="cate_text">Mysql</span></a>
+      <a href="#"><img src="https://4.bp.blogspot.com/-Fxo_qnGJBj0/WRoDPNdlEII/AAAAAAAABF0/1mSHmv5gleQaCsHKEDgTB3DbNghjCXvZACLcB/s1600/logo_firebase_1920px_clr.png" alt="Firebase"> <span class="cate_text">Firebase</span></a>
       <div class="category">SCM</div>
-      <a href="#"><img src="https://miro.medium.com/max/480/1*1OKmA2EdGln8O6RCVORgGg.png" alt="Github"> <span>GitHub</span></a>
-      <a href="#"><img src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/184_Jira-512.png" alt="Jira"> <span>Jira</span></a>
+      <a href="#"><img src="https://miro.medium.com/max/480/1*1OKmA2EdGln8O6RCVORgGg.png" alt="Github"> <span class="cate_text">GitHub</span></a>
+      <a href="#"><img src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/184_Jira-512.png" alt="Jira"> <span class="cate_text">Jira</span></a>
     </div>
     <div id="others">
       <div class="title-others">
@@ -132,6 +132,17 @@ export default {
 /* ==========================================================================
     Taskbar
 ========================================================================== */
+@font-face {
+  font-family: 'ymB';
+  src: url("../assets/font/ymB.ttf") format('truetype')
+}
+
+@font-face {
+  font-family: 'ymL';
+  src: url("../assets/font/ymL.ttf") format('truetype')
+}
+
+
 .taskbar {
   position: fixed;
   bottom: 0;
@@ -429,16 +440,21 @@ export default {
 }
 
 .start-menu-modal #apps a.category {
+  font-family: "ymB";
   font-size: 15px;
   height: 30px;
 }
 
 .start-menu-modal #apps div.category {
+  font-family: "ymB";
   margin-top: 15px;
   margin-bottom: 5px;
 }
 
+
+
 .start-menu-modal #others .title-others {
+  font-family: "ymB";
   color: whitesmoke;
   text-decoration: none;
   padding: 10px 10px 0px 20px;
@@ -448,6 +464,7 @@ export default {
 }
 
 .start-menu-modal #others .box-others {
+  
   display: inline-flex;
   padding-left: 20px;
   flex-wrap: wrap;
@@ -481,6 +498,10 @@ export default {
 
 .start-menu-modal #others .box-others .box:hover {
   border: 2px solid #7fbbeb;
+}
+
+.cate_text{
+  font-family: "ymL";
 }
 
 </style>
