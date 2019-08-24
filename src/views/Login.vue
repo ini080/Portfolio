@@ -12,7 +12,7 @@
   </div>
 
   <div class="Login_area">
-    <div class="userLogo"><img src="../../public/login_icon.png" /></div>
+    <div class="userLogo"><img src="../assets/login_icon.png" /></div>
 
     <div class="userName" v-if="!login">
       <h1>JeongGeon Heo</h1>
@@ -100,7 +100,7 @@ html {
 .LockPage {
     z-index: 2;
     position: relative;
-    background: url("../../public/windows_background.jpg") center;
+    background: url("../assets/windows_background.jpg") center;
     background-size: 100vw 100vh;
     width: 100vw;
     height: 100vh;
@@ -132,7 +132,7 @@ html {
 .Login_area {
     z-index: 1;
     position: relative;
-    background: url("../../public/windows_login.jpg") center;
+    background: url("../assets/windows_login.jpg") center;
     background-size: 100vw 100vh;
     width: 100vw;
     height: 100vh;
@@ -142,7 +142,7 @@ html {
           width: 15em;
           height: 15em;
           position: relative;
-          top: 180px;
+          top: 250px;
           margin: 0 auto;
           display: block;
       }
@@ -155,7 +155,7 @@ html {
 
       .userName {
           position: relative;
-          top: 180px;
+          top: 250px;
           text-align: center;
           color: #fff;
           margin: 1em 0;
@@ -163,7 +163,7 @@ html {
 
       .userLogin_button {
           position: relative;
-          top: 180px;
+          top: 250px;
           cursor: pointer;
           border: 1px solid #fff;
           border-radius: 5px;

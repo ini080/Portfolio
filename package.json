@@ -1,39 +1,29 @@
 {
-  "name": "jg-portfolio",
+  "name": "jg_portfolio",
   "version": "0.1.0",
-  "description": "JG's Portfolio Page",
+  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },
-  "homepage": "https://github.com/ini080/ini080.github.io",
   "dependencies": {
     "core-js": "^2.6.5",
-    "font-awesome": "^4.7.0",
-    "jquery": "^3.4.1",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^7.2.0",
+    "register-service-worker": "^1.6.2",
     "vue": "^2.6.10",
-    "vue-cli": "^2.9.6",
     "vue-grid-layout": "^2.3.4",
     "vue-router": "^3.0.3",
-    "vuex": "^3.0.1"
+    "vue-svg-loader": "^0.12.0",
+    "vuex": "^3.0.1",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.10.0",
-    "@vue/cli-service": "^3.10.0",
-    "expose-loader": "^0.7.5",
-    "vue-svg-loader": "^0.12.0",
+    "@vue/cli-plugin-babel": "^3.11.0",
+    "@vue/cli-plugin-pwa": "^3.11.0",
+    "@vue/cli-service": "^3.11.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.6.10"
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ],
-  "license": "MIT"
+  }
 }

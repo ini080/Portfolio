@@ -1,7 +1,7 @@
 <template>
 <div class="profile">
 
-  <img class="picture" src="../../public/picture.jpg" />
+  <img class="picture" src="@/assets/picture.jpg" />
 
   <div class="profile_info">
     <dl>

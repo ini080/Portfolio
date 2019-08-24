@@ -1,16 +1,29 @@
-# jg-portfolio
+# jg_portfolio
 
-[Portfolio](http://정건.kr)
+## Project setup
+```
+npm install
+```
 
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-## 해야할일
+### Compiles and minifies for production
+```
+npm run build
+```
 
-* 시작메뉴 프로젝트들 추가.
-* Title bar , Start Bar 손보기
-* Project ( 사진 , 설명, 소스업로드)
-* Algorithm
+### Run your tests
+```
+npm run test
+```
 
+### Lints and fixes files
+```
+npm run lint
+```
 
-# Copyright
-
-Theme - vue-metro-tile [link](https://github.com/yuanfux/vue-metro-tile)
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
