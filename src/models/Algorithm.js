@@ -1,43 +1,48 @@
 export default [
   {
+    'site' : 'BOJ',
+    'number': '1234',
+    'name' : '토마토',
+    'disc' : '토마토 찾아내기',
+    'type' : 'DFS',
+    'date' : '2019.01',
+    'link' : 'https://www.acmicpc.net/',
+  },
+  {
+    'site' : 'BOJ',
+    'number': '122312',
+    'name' : '뿌요뿌요',
+    'disc' : '색맞으면 터뜨리기.',
+    'type' : 'DFS, BFS',
+    'date' : '2019.01',
+    'link' : 'https://www.acmicpc.net/',
+  },
+  {
+    'site' : 'BOJ',
+    'number': '12412513',
+    'name' : '파이프옮기기',
+    'disc' : '파이프를 옮기자.',
+    'type' : 'DFS, BFS',
+    'date' : '2019.01',
+    'link' : 'https://www.acmicpc.net/',
+  },
+  {
+    'site' : 'SWexpert',
+    'number': '12312312314',
     'name' : '아두이노 자동주차 시스템',
-    'info' : '',
     'disc' : '아두이노와 RC카를 결합하고, 자동으로 주차를 도와주는 시스템입니다.',
-    'date' : '',
-    'link' : '',
-    'type' : 'BOJ'
+    'type' : 'DFS',
+    'date' : '2019.01',
+    'link' : 'https://swexpertacademy.com/main/main.do',
   },
   {
-    'name' : '스마트 블라인드',
-    'info' : 'Springboot + Mysql + Mybatis + Vue.js',
-    'disc' : '안전한 먹거리를 제공하는 프로젝트입니다.',
-    'date' : '',
-    'link' : '',
-    'type' : 'BOJ'
-  },
-  {
-    'name' : 'Safe_Food Project',
-    'info' : 'Springboot + Mysql + Mybatis + Vue.js',
-    'disc' : '안전한 먹거리를 제공하는 프로젝트입니다.',
-    'date' : '',
-    'link' : '',
-    'type' : 'SWexpert'
-  },
-  {
-    'name' : 'Web_Mobile Project',
-    'info' : 'Springboot + Mysql + Mybatis + Vue.js',
-    'disc' : '안전한 먹거리를 제공하는 프로젝트입니다.',
-    'date' : '',
-    'link' : '',
-    'type' : 'SWexpert'
-  },
-  {
-    'name' : '다솜봇 카카오톡 챗봇',
-    'info' : 'Node JS + API + KAKAO I OpenBuilder',
-    'disc' : '여러 API를 사용하여 원하는 대답을 해주는 카카오톡 챗봇입니다.',
-    'date' : '',
-    'link' : '',
-    'type' : 'SWexpert'
+    'site' : 'SWexpert',
+    'number': '12151334',
+    'name' : '점심식사시간',
+    'disc' : '점심먹을래?.',
+    'type' : 'DFS , BrootForce',
+    'date' : '2019.01',
+    'link' : 'https://swexpertacademy.com/main/main.do',
   },
 
 ]

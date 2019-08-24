@@ -302,7 +302,7 @@ export default {
 .taskbar .icons-right .datetime {
   font-family: "ymL";
   display: table-cell;
-  width: 70px !important;
+  width: 100px !important;
   cursor: pointer;
   padding-top: 3px;
 }
