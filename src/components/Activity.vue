@@ -4,7 +4,7 @@
     <div class="item_title">{{ item.name }}</div>
     <img class="item_image" v-if="index==0" src="@/assets/activity/capstone.jpg" height="300">
     <img class="item_image" v-if="index==1" src="@/assets/activity/ssafy.jpg" height="350">
-    <img class="item_image border" v-if="index==2" src="@/assets/activity/expert.png" height="100" width="90%">
+    <img class="item_image style_border" v-if="index==2" src="@/assets/activity/expert.png" height="100" width="90%">
     <img class="item_image" v-if="index==3" src="@/assets/activity/ssafy2.jpg" height="450">
 
     <div class="item_content">
@@ -44,7 +44,7 @@ export default {
   background-color: #eee;
 }
 
-.border{
+.style_border{
   margin-top: 10px;
   border:2px solid black;
 }
