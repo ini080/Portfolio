@@ -1,29 +1,16 @@
-# jg_portfolio
+# Portfolio
 
-## Project setup
-```
-npm install
-```
+<div align="center">
+  <img src="https://t1.daumcdn.net/cfile/tistory/99FE6F445A5615D02F" width="240px">
+  <h1>Made By Vue.js</h1>
+</div>
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### Link  
 
-### Compiles and minifies for production
-```
-npm run build
-```
+See [JG_Portfolio](https://http://13.124.104.44:8080/)
 
-### Run your tests
-```
-npm run test
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### ScreenShot
+![screensh](./ScreenShot/Login1.jpg)  
+![screensh](./ScreenShot/Login2.jpg)  
+![screensh](./ScreenShot/Login3.jpg)  

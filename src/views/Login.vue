@@ -142,7 +142,7 @@ html {
           width: 15em;
           height: 15em;
           position: relative;
-          top: 250px;
+          top: 180px;
           margin: 0 auto;
           display: block;
       }
@@ -155,7 +155,7 @@ html {
 
       .userName {
           position: relative;
-          top: 250px;
+          top: 180px;
           text-align: center;
           color: #fff;
           margin: 1em 0;
@@ -163,7 +163,7 @@ html {
 
       .userLogin_button {
           position: relative;
-          top: 250px;
+          top: 180px;
           cursor: pointer;
           border: 1px solid #fff;
           border-radius: 5px;
