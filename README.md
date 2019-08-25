@@ -20,5 +20,5 @@
   <h1>ScreenShot</h1>
 <img src="./ScreenShot/Login1.png" width="400px">
 <img src="./ScreenShot/Login2.png" width="400px">
-<img src="./ScreenShot/Home.png">
+<img src="./ScreenShot/HOME.png">
 </div>
