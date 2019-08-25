@@ -18,7 +18,7 @@
 
 <div align="center">
   <h1>ScreenShot</h1>
-<img src="./ScreenShot/Login1.jpg" width="400px">
-<img src="./ScreenShot/Login2.jpg" width="400px">
-<img src="./ScreenShot/HOME.png">
+<img src="./ScreenShot/Login1.png" width="400px">
+<img src="./ScreenShot/Login2.png" width="400px">
+<img src="./ScreenShot/Home.png">
 </div>
