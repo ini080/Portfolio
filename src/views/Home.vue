@@ -423,6 +423,7 @@ body {
 
 .subtitle {
   margin-top: 5px;
+  margin-bottom: 10px;
   font-family: "ymL";
   font-size: 15px;
   font-weight: 500;
