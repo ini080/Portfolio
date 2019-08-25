@@ -7,6 +7,9 @@
     <br>
     <h3>Link </h3>
     <h2><a href="http://13.124.104.44:8080">JG Portfolio</a></h2>
+    <br>
+    <br>
+    <h3> If you want the source code please contact me! </h3>
 </div>
 
 
