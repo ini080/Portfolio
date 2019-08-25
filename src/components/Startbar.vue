@@ -59,6 +59,7 @@
       <a href="#"><img src="https://miro.medium.com/max/480/1*1OKmA2EdGln8O6RCVORgGg.png" alt="Github"> <span class="cate_text">GitHub</span></a>
       <a href="#"><img src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/184_Jira-512.png" alt="Jira"> <span class="cate_text">Jira</span></a>
     </div>
+    <!--
     <div id="others">
       <div class="title-others">
         My Projects
@@ -90,6 +91,7 @@
         </div>
       </div>
     </div>
+    -->
   </div>
   </transition>
 </div>
@@ -347,7 +349,8 @@ export default {
   height: 650px;
   color: white;
   display: grid;
-  grid-template-columns: 50px 250px 400px;
+  /*grid-template-columns: 50px 250px 400px; */
+  grid-template-columns: 50px 250px;
   cursor: default;
 }
 
