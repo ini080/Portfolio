@@ -1,7 +1,7 @@
 
 <div align="center">
     <h1>Portfolio</h1>
-    <h3>Made By Vue.js 😃</h3>
+    <h3>Made With Vue.js 😃</h3>
     <img src="https://t1.daumcdn.net/cfile/tistory/99FE6F445A5615D02F" width="360px">
     <br>
     <br>
