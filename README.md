@@ -10,6 +10,7 @@
     <br>
     <br>
     <h2> If you want the source code please contact me! </h2>
+    Email: <a href="mailto:ini0800@gmail.com">ini0800@gmail.com</a></p>
 </div>
 
 
