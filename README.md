@@ -6,7 +6,7 @@
     <br>
     <br>
     <h3>Link </h3>
-    <h2><a href="http://54.180.175.76:8080/">JG Portfolio</a></h2>
+    <h2><a href="http://ini080.site/">JG Portfolio</a></h2>
     <br>
     <br>
     <h2> If you want the source code please contact me! </h2>
