@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import Workspace from '../components/Workspace'
-import TaskBar from '../components/TaskBar'
-import StartMenu from '../components/StartMenu'
-import NotificationCenter from '../components/NotificationCenter'
-import Calendar from '../components/Calendar'
+import Workspace from '@/components/Workspace.vue'
+import TaskBar from '@/components/TaskBar.vue'
+import StartMenu from '@/components/StartMenu.vue'
+import NotificationCenter from '@/components/NotificationCenter.vue'
+import Calendar from '@/components/Calendar.vue'
 
 export default {
     name: 'Desktop',
