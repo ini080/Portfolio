@@ -14,7 +14,7 @@
           <div class="backdrop"></div>
           
           <div class="Login_area" >
-              <div class="userLogo"><img src="../assets/login_icon.png" /></div>
+              <div class="userLogo"><img src="@/assets/login_icon.png" /></div>
 
               <div class="userName" v-if="!login">
                   <h1>JeongGeon Heo</h1>

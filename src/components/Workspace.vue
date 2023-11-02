@@ -65,7 +65,6 @@ export default {
     },
     methods: {
         loadItems() {
-
             this.updateGrid()
 
             let items = [
