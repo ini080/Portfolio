@@ -34,17 +34,17 @@
 </template>
 
 <script>
-import Format from '@/store/date-format.js'
+import Utils from '@/store/utils.js'
 
 export default {
   data() {
     return {
       lock: true,
       login: false,
-      format: Format,
-      time: Format.getTime(null, 'en'),
-      date: Format.getDate(null, 'kr'),
-      ap: Format.getAp(null, 'kr')
+      format: Utils,
+      time: Utils.getTime(null, 'en'),
+      date: Utils.getDate(null, 'kr'),
+      ap: Utils.getAp(null, 'kr')
     };
   },
 

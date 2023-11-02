@@ -3,7 +3,7 @@
 
         <div class="flex gap-2 p-1">
             <button class="rounded-sm hover:bg-white hover:bg-opacity-80 dark:hover:bg-black dark:hover:bg-opacity-20 duration-200 cursor-auto" v-for="(item, index) in items" :key="index" @click="item.action(); openApp(item.name)">
-                <img class="transform active:scale-75 duration-150 px-1.5 py-1" :src="`@/assets/icons/${item.icon}.png`" width="34">
+                <img class="transform active:scale-75 duration-150 px-1.5 py-1" :src="item.icon" width="34">
             </button>
         </div>
 
@@ -33,6 +33,7 @@
 </template>
 
 <script>
+import Utils from '@/store/utils.js'
 import moment from 'moment'
 import {mapState} from 'vuex'
 
@@ -45,14 +46,14 @@ export default {
         items() {
             let iconTheme = this.darkMode ? 'light' : 'dark'
             return [
-                { name: 'start', icon: 'start', action: this.toggleStartMenu },
-                { name: 'search', icon: 'search-' + iconTheme, action: this.none },
-                { name: 'widget', icon: 'widget', action: this.none },
-                { name: 'settings', icon: 'settings', action: this.none },
-                { name: 'explorer', icon: 'explorer', action: this.none },
-                { name: 'edge', icon: 'edge', action: this.none },
-                { name: 'store', icon: 'store-' + iconTheme, action: this.none },
-                { name: 'vscode', icon: 'vscode', action: this.none },
+                { name: 'start', icon: Utils.getImageUrl('start'), action: this.toggleStartMenu },
+                { name: 'search', icon: Utils.getImageUrl('search-' + iconTheme), action: this.none },
+                { name: 'widget', icon: Utils.getImageUrl('widget'), action: this.none },
+                { name: 'settings', icon: Utils.getImageUrl('settings'), action: this.none },
+                { name: 'explorer', icon: Utils.getImageUrl('explorer'), action: this.none },
+                { name: 'edge', icon: Utils.getImageUrl('edge'), action: this.none },
+                { name: 'store', icon: Utils.getImageUrl('store-' + iconTheme), action: this.none },
+                { name: 'vscode', icon: Utils.getImageUrl('vscode'), action: this.none },
             ]
         }
     },

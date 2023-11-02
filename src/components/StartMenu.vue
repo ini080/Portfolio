@@ -49,8 +49,8 @@
 
         <div class="bg-black bg-opacity-5 dark:bg-opacity-10 px-12 py-4">
             <div class="user flex items-center gap-2">
-                <img src="../assets/bilal-bentoumi.jpg" class="rounded-full" width="26"/>
-                <span class="text-2xs text-gray-800 dark:text-gray-300">Bilal Bentoumi</span>
+                <img src="../assets/profile.jpg" class="rounded-full" width="26"/>
+                <span class="text-2xs text-gray-800 dark:text-gray-300">허정건</span>
                 <div class="flex-grow"></div>
                 <img src="../assets/ui/power.png" class="rounded-full" :class="{ 'filter invert': !darkMode }" width="14"/>
             </div>
@@ -60,9 +60,9 @@
 </template>
 
 <script>
+import Utils from '@/store/utils.js'
 import {mapState} from 'vuex'
 
-import iconEdge from '@/assets/icons/edge.png';
 export default {
     name: 'StartMenu',
     computed: {
@@ -75,10 +75,10 @@ export default {
         return {
 
             apps: [
-                { label: 'Edge', icon: iconEdge, active: false, click: this.none },
-                { label: 'Word', icon: iconEdge, active: false, click: this.none },
-                { label: 'PowerPoint', icon: iconEdge, active: false, click: this.none },
-                { label: 'OneNote', icon: 'src/assets/icons/onenote.png', active: false, click: this.none },
+                { label: 'Edge', icon: Utils.getImageUrl("onenote"), active: false, click: this.none },
+                { label: 'Word', icon: Utils.getImageUrl("onenote"), active: false, click: this.none },
+                { label: 'PowerPoint', icon: Utils.getImageUrl("onenote"), active: false, click: this.none },
+                { label: 'OneNote', icon: Utils.getImageUrl("onenote"), active: false, click: this.none },
                 { label: 'Mail', icon: 'src/assets/icons/mail.png', active: false, click: this.none },
                 { label: 'To Do', icon: 'src/assets/icons/todo.png', active: false, click: this.none },
                 { label: 'Store', icon: 'src/assets/icons/store-dark.png', active: false, click: this.none },
@@ -94,7 +94,7 @@ export default {
             ],
 
             recommendedApps: [
-                { label: 'Edge', subLabel: '17min ago', icon: iconEdge, active: false, click: this.none },
+                { label: 'Edge', subLabel: '17min ago', icon: Utils.getImageUrl("onenote"), active: false, click: this.none },
                 { label: 'Word', subLabel: '1h ago', icon: 'src/assets/icons/word.png', active: false, click: this.none },
                 { label: 'Mail', subLabel: '12h ago', icon: 'src/assets/icons/mail.png', active: false, click: this.none },
                 { label: 'Terminal', subLabel: '1h ago', icon: 'src/assets/icons/terminal.png', active: false, click: this.none },

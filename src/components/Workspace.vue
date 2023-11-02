@@ -16,7 +16,7 @@
 
             <grid-item v-for="item in items" :x="item.x" :y="item.y" :w="item.w" :h="item.h" :i="item.i" :key="item.i" style="touch-action: none;">
                 <div class="app flex flex-col justify-center items-center w-24 h-28 hover:bg-white hover:bg-opacity-10 focus:bg-blue-500 focus:bg-opacity-10 border border-transparent rounded-sm" :class="{ 'bg-blue-500 hover:bg-blue-500 bg-opacity-10': activeItem === item.i }" @mouseup="activeItem = item.i">
-                    <img :src="`@/assets/icons/${item.icon}.png`" width="43" height="43">
+                    <img :src="item.icon" width="43" height="43">
                     <span class="text-white text-xs text-center app-name">{{ item.label }}</span>
                 </div>
             </grid-item>
@@ -31,6 +31,8 @@
 </template>
 
 <script>
+import Utils from '@/store/utils.js'
+
 import VueGridLayout from 'vue3-drr-grid-layout'
 import 'vue3-drr-grid-layout/dist/style.css'
 import VSCode from '@/components/apps/VSCode.vue'
@@ -67,11 +69,11 @@ export default {
             this.updateGrid()
 
             let items = [
-                { label: 'This PC', icon: 'computer' },
-                { label: 'Recycle Bin', icon: 'trash-empty' },
-                { label: 'File Explorer', icon: 'explorer' },
-                { label: 'Microsoft Store', icon: 'store-' + this.iconTheme },
-                { label: 'Microsoft Edge', icon: 'edge' }
+                { label: 'This PC', icon: Utils.getImageUrl("computer")},
+                { label: 'Recycle Bin', icon: Utils.getImageUrl("trash-empty") },
+                { label: 'File Explorer', icon: Utils.getImageUrl("explorer") },
+                { label: 'Microsoft Store', icon: Utils.getImageUrl("store-" + this.iconTheme) },
+                { label: 'Microsoft Edge', icon: Utils.getImageUrl("edge") }
             ]
 
             for (let i = 0; i < items.length; i++) {
@@ -88,7 +90,7 @@ export default {
         updateGrid() {
             // this.cols = parseInt(document.querySelector('.desktop-icons').offsetWidth / 96)
             // this.rows = parseInt(document.querySelector('.desktop-icons').offsetHeight / 112)
-        }
+        },
     },
     mounted() {
 

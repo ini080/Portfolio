@@ -53,9 +53,14 @@ const getSimple = (date, lang) => {
   }
 }
 
+const getImageUrl = (name) => {
+  return new URL(`../assets/icons/${name}.png`, import.meta.url).href
+}
+
 export default {
   getTime,
   getDate,
   getAp,
-  getSimple
+  getSimple,
+  getImageUrl
 }
