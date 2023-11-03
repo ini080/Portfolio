@@ -164,7 +164,12 @@ opacity: 0;
       transform: translate(-50%,-50%);
 
       @media screen and (max-width:599px) {
-      top: 25%;
+        top:50%;
+        left:50%;
+        width:30%;
+        height:35%;
+        text-align:center;
+        position: absolute;
       }
   }
 
@@ -174,8 +179,9 @@ opacity: 0;
       border-radius: 10em;
 
       @media screen and (max-width:599px) {
-      width: 65%;
-      height: 65%;
+        height:40%;
+        text-align:center;
+        position: absolute;
       }
   }
 
@@ -186,9 +192,11 @@ opacity: 0;
       transform: translate(-50%,-50%);
       text-align: center;
       color: #fff;
+      font-weight: bold;
+      font-size: 25px;
       @media screen and (max-width:599px) {
-          top: 14%;
-          font-size: 0.8em;
+          // top: 14%;
+          // font-size: 0.8em;
       }
   }
 
@@ -204,11 +212,11 @@ opacity: 0;
       outline: none;
       color: #fff;
       font-weight: bold;
-      padding: 10px 20px;
+      padding: 5px 40px;
       transition: 0.3s;
 
       @media screen and (max-width:599px) {
-          top: 100px;
+          // top: 100px;
       }
   }
 
