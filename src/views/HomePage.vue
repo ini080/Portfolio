@@ -16,7 +16,7 @@ import NotificationCenter from '@/components/NotificationCenter.vue'
 import Calendar from '@/components/Calendar.vue'
 
 export default {
-    name: 'Desktop',
+    name: 'HomePage',
     components: {
         Workspace,
         TaskBar,
