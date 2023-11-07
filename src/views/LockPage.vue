@@ -1,17 +1,21 @@
 <template>
-  <div class="lockPage" @click="lockToggle">
+  <div class="w-screen h-screen bg-center bg-cover flex justify-center items-center bg-[url('../assets/windows_background.jpg')]" @click="lockToggle">
     <transition name="lockAni" >
       
       <!-- 잠금화면 -->
-      <div v-if="lock" class="modal">
-          <div class="time_area"> {{ time }} </div>
-          <div class="date_area"> {{ date }} </div>
+      <div v-if="lock" class="fixed top-0 left-0 w-screen h-screen">
+        <div class="absolute bottom-0 left-0  text-white text-4xl top-[73vh]"> 
+          <div class="sm:text-3xl md:text-5xl lg:text-4xl p-4 md:p-5 lg:p-10"> {{ date }} </div>
+        </div>
+        <div class="absolute bottom-0 left-0  text-white text-7xl font-bold top-[80vh]"> 
+          <div class="sm:text-7xl md:text-3xl lg:text-3xl p-2 md:p-10 lg:p-10"> {{ time }}  </div>
+        </div>
       </div>
 
       <!-- 로그인시도 화면-->
-      <div v-else class="modal">
+      <div v-else class="fixed top-0 left-0 w-screen h-screen">
           <!-- 애니메이션 -->
-          <div class="backdrop"></div>
+          <div class="fixed top-0 left-0 right-0 bottom-0 backdrop-blur-sm bg-[rgba(0, 0, 0, 0.6)] z-[-1]"></div>
           
           <div class="Login_area" >
               <div class="userLogo"><img src="@/assets/login_icon.png" /></div>
@@ -77,37 +81,6 @@ export default {
 </script>
 
 <style lang="scss">
-body {
-  margin: 0;
-}
-.lockPage {
-width: 100vw;
-height: 100vh;
-background: url("../assets/windows_background.jpg") center;
-background-size: cover;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-
-  > .backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  backdrop-filter: blur(4px);
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: -1;
-  }
-}
 
 .lockAni-enter-active,
 .lockAni-leave-active {
@@ -125,29 +98,6 @@ transition: opacity 0s;
 .fade-enter,
 .fade-leave-to {
 opacity: 0;
-}
-
-.time_area {
-  position: absolute;
-  bottom: 0;
-  margin: 20px;
-  color: #fff;
-  font-size: 6em;
-  font-family: D2;
-  top: 65vh;
-  font-weight: bold;
-  padding: 10px 20px;
-}
-
-.date_area {
-  position: absolute;
-  bottom: 0;
-  margin: 0;
-  color: #fff;
-  font-size: 4em;
-  font-family: D2;
-  top: 65vh;
-  padding: 150px 40px;
 }
 
 .Login_area {
