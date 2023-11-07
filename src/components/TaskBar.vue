@@ -80,18 +80,14 @@ export default {
         },
         none() {},
         openApp(appName) {
-
-            if (this.$store.state.apps[appName]) {
-
+            if (this.$store.state.apps[appName]) {  
                 if (this.$store.state.apps[appName].isActive) {
                     this.$store.state.apps[appName].isMinimized = !this.$store.state.apps[appName].isMinimized
                 } else {
                     this.$store.state.apps[appName].isMinimized = false
                     this.$store.state.apps[appName].isActive = true
                 }
-
             }
-
         }
     },
     mounted() {
