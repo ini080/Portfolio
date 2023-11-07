@@ -5,10 +5,10 @@
       <!-- 잠금화면 -->
       <div v-if="lock" class="fixed top-0 left-0 w-screen h-screen">
         <div class="absolute bottom-0 left-0  text-white text-4xl top-[73vh]"> 
-          <div class="sm:text-xl md:text-5xl lg:text-4xl p-4 md:p-5 lg:p-10"> {{ date }} </div>
+          <div class="sm:text-3xl md:text-5xl lg:text-4xl p-4 md:p-5 lg:p-10"> {{ date }} </div>
         </div>
         <div class="absolute bottom-0 left-0  text-white text-7xl font-bold top-[80vh]"> 
-          <div class="sm:text-5xl md:text-3xl lg:text-3xl p-2 md:p-10 lg:p-10"> {{ time }}  </div>
+          <div class="sm:text-7xl md:text-3xl lg:text-3xl p-2 md:p-10 lg:p-10"> {{ time }}  </div>
         </div>
       </div>
 
