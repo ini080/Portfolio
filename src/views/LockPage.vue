@@ -1,5 +1,5 @@
 <template>
-  <div class="w-screen h-screen bg-center bg-cover flex justify-center items-center bg-[url('../assets/windows_background.jpg')]" @click="lockToggle">
+  <div class="w-screen h-screen bg-center bg-cover flex justify-center items-center bg-[url('@/assets/windows_background.jpg')]" @click="lockToggle">
     <transition name="lockAni" >
       
       <!-- 잠금화면 -->
