@@ -1,13 +1,13 @@
 <template>
-  <div class="w-screen h-screen bg-center bg-cover flex justify-center items-center bg-[url('@/assets/windows_background.jpg')]" @click="lockToggle">
+  <div class="w-screen h-screen bg-center bg-cover flex justify-center items-center lockPage" @click="lockToggle">
     <transition name="lockAni" >
       
       <!-- 잠금화면 -->
-      <div v-if="lock" class="fixed top-0 left-0 w-screen h-screen">
-        <div class="absolute bottom-0 left-0  text-white text-4xl top-[73vh]"> 
+      <div v-if="lock" class="fixed top-3/4 left-0 w-screen h-screen">
+        <div class="flex bottom-0 left-0  text-white text-4xl top-[50vh]"> 
           <div class="sm:text-3xl md:text-5xl lg:text-4xl p-4 md:p-5 lg:p-10"> {{ date }} </div>
         </div>
-        <div class="absolute bottom-0 left-0  text-white text-7xl font-bold top-[80vh]"> 
+        <div class="flex bottom-0 left-0  text-white text-7xl font-bold top-[80vh]"> 
           <div class="sm:text-7xl md:text-3xl lg:text-3xl p-2 md:p-10 lg:p-10"> {{ time }}  </div>
         </div>
       </div>
@@ -98,6 +98,10 @@ transition: opacity 0s;
 .fade-enter,
 .fade-leave-to {
 opacity: 0;
+}
+
+.lockPage{
+  background-image: url('../assets/windows_background.jpg');
 }
 
 .Login_area {
