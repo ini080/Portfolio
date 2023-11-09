@@ -35,21 +35,6 @@
               <div class="absolute w-60 top-4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-3xl" v-else>환영합니다</div>
             </transition>
           </div>
-          
-          <!-- <div class="Login_area" >
-              <div class="userLogo"><img src="@/assets/login_icon.png" /></div>
-
-              <div class="userName" v-if="!login">
-                  <h1>JeongGeon Heo</h1>
-              </div>
-
-              <transition name="fade" mode="out-in">
-                  <button class="userLogin_button" id="loginBtn" @click="onLogin" v-if="!login">
-                      Login
-                  </button>
-                  <div class="userLogin_message" v-else>환영합니다</div>
-              </transition>
-          </div> -->
       </div>
 
     </transition>

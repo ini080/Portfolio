@@ -2,7 +2,7 @@
     <div class="desktop flex flex-col w-full h-full overflow-hidden">
         <Workspace/>
         <TaskBar/>
-        <StartMenu/>
+        <StartMenu @onLogout="$emit('onLogout')"/>
         <Calendar/>
         <NotificationCenter/>
     </div>
@@ -23,6 +23,8 @@ export default {
         StartMenu,
         Calendar,
         NotificationCenter
+    },
+    methods:{
     }
 }
 </script>

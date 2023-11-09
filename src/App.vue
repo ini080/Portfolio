@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="screen h-full relative" :class="{'dark': darkMode}">
     <transition name="fade" mode="out-in">
       <router-view
         @onLogin="changeRoute('Home')"
@@ -13,6 +13,11 @@
 <script>
 export default {
   name: 'app',
+  computed:{
+    darkMode() {
+        return this.$store.state.darkMode
+    },
+  },
   methods: {
     changeRoute (routeName) {
       this.$router.push({ name: routeName })
@@ -30,7 +35,6 @@ export default {
   -khtml-user-drag: none;
   -moz-user-drag: none;
   -o-user-drag: none;
-  user-drag: none;
 
   -webkit-touch-callout: none;
   -webkit-user-select: none;

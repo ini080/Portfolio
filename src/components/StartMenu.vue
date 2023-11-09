@@ -50,9 +50,11 @@
         <div class="bg-black bg-opacity-5 dark:bg-opacity-10 px-12 py-4">
             <div class="user flex items-center gap-2">
                 <img src="../assets/profile.jpg" class="rounded-full" width="26"/>
-                <span class="text-2xs text-gray-800 dark:text-gray-300">허정건</span>
+                <span class="text-sm text-gray-800 dark:text-white">허정건</span>
                 <div class="flex-grow"></div>
-                <img src="../assets/ui/power.png" class="rounded-full" :class="{ 'filter invert': !darkMode }" width="14"/>
+                <div class="w-5 h-5 items-center rounded-full hover:bg-gray-50 dark:hover:bg-opacity-20 dark:bg-opacity-10 duration-100" width="26" @click="[$emit('onLogout'), closePopup()]">
+                    <img src="../assets/ui/power.png" class="w-auto" :class="{ 'filter invert': !darkMode }"/>
+                </div>
             </div>
         </div>
 
@@ -105,7 +107,9 @@ export default {
         }
     },
     methods: {
-        none() {}
+        closePopup(){
+            this.$store.dispatch('toggleStartMenu')
+        }
     }
 }
 </script>
