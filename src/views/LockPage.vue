@@ -3,21 +3,35 @@
     <transition name="lockAni" >
       
       <!-- 잠금화면 -->
-      <div v-if="lock" class="fixed top-3/4 left-0 w-screen h-screen">
-        <div class="flex bottom-0 left-0  text-white text-4xl top-[50vh]"> 
-          <div class="sm:text-3xl md:text-5xl lg:text-4xl p-4 md:p-5 lg:p-10"> {{ date }} </div>
-        </div>
-        <div class="flex bottom-0 left-0  text-white text-7xl font-bold top-[80vh]"> 
-          <div class="sm:text-7xl md:text-3xl lg:text-3xl p-2 md:p-10 lg:p-10"> {{ time }}  </div>
-        </div>
+      <div v-if="lock" class="fixed bottom-0 left-0">
+        <p class=" text-white p-4 m-2 text-left text-4xl
+                  sm:p-2 sm:pt-0 sm:m-1 sm:text-2xl
+                  md:p-4 md:pt-0 md:m-2
+                  lg:p-2 lg:m-1">{{ date }}</p>
+        <p class="text-white p-4 pt-0 m-2 mb-12 text-left font-bold
+                sm:p-2 sm:pt-0 sm:m-1 sm:mb-10 sm:text-6xl
+                md:p-4 md:m-2 md:w-1/2 md:text-4xl
+                lg:p-2 lg:m-1 lg:w-1/3 lg:text-4xl">{{ time }}</p>
       </div>
-
+      
       <!-- 로그인시도 화면-->
-      <div v-else class="fixed top-0 left-0 w-screen h-screen">
+      <div v-else class="fixed">
           <!-- 애니메이션 -->
-          <div class="fixed top-0 left-0 right-0 bottom-0 backdrop-blur-sm bg-[rgba(0, 0, 0, 0.6)] z-[-1]"></div>
+          <div class="fixed backdrop-blur-sm bg-[rgba(0, 0, 0, 0.6)] z-[-1]"></div>
           
-          <div class="Login_area" >
+          <div class="absolute justify-center items-center">
+            <div class="w-60 h-60 absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <img src="@/assets/login_icon.png" alt="User Logo" class="w-full h-full rounded-full">
+            </div>
+            <div v-if="!login" class="absolute top-51 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold text-2xl">
+              User Name
+            </div>
+            <button class="absolute top-56.5 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer border border-white rounded-md bg-transparent outline-none text-white font-bold py-1 px-10 transition duration-300">
+              Login
+            </button>
+          </div>
+          
+          <!-- <div class="Login_area" >
               <div class="userLogo"><img src="@/assets/login_icon.png" /></div>
 
               <div class="userName" v-if="!login">
@@ -30,7 +44,7 @@
                   </button>
                   <div class="userLogin_message" v-else>환영합니다</div>
               </transition>
-          </div>
+          </div> -->
       </div>
 
     </transition>
@@ -117,14 +131,6 @@ opacity: 0;
       left: 50%;
       transform: translate(-50%,-50%);
 
-      @media screen and (max-width:599px) {
-        top:50%;
-        left:50%;
-        width:30%;
-        height:35%;
-        text-align:center;
-        position: absolute;
-      }
   }
 
   .userLogo img {
@@ -132,11 +138,6 @@ opacity: 0;
       height: 15em;
       border-radius: 10em;
 
-      @media screen and (max-width:599px) {
-        height:40%;
-        text-align:center;
-        position: absolute;
-      }
   }
 
   .userName {
@@ -148,10 +149,6 @@ opacity: 0;
       color: #fff;
       font-weight: bold;
       font-size: 25px;
-      @media screen and (max-width:599px) {
-          // top: 14%;
-          // font-size: 0.8em;
-      }
   }
 
   .userLogin_button {
@@ -169,9 +166,6 @@ opacity: 0;
       padding: 5px 40px;
       transition: 0.3s;
 
-      @media screen and (max-width:599px) {
-          // top: 100px;
-      }
   }
 
   .userLogin_button:hover {

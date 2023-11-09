@@ -57,10 +57,15 @@ const getImageUrl = (name) => {
   return new URL(`../assets/icons/${name}.png`, import.meta.url).href
 }
 
+const getImageUrl2 = (name) => {
+  return new URL(`../assets/${name}.png`, import.meta.url).href
+}
+
 export default {
   getTime,
   getDate,
   getAp,
   getSimple,
-  getImageUrl
+  getImageUrl,
+  getImageUrl2
 }
