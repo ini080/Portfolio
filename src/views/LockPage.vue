@@ -24,7 +24,7 @@
               <img src="@/assets/login_icon.png" alt="User Logo" class="w-full h-full rounded-full">
             </div>
             
-            <p v-if="!login" class="absolute w-60 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold text-3xl" >
+            <p v-if="!login" class="absolute w-60 mt-2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold text-3xl" >
                 JeongGeon Heo
             </p>
 
