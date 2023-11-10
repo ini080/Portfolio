@@ -7,11 +7,11 @@
         <p class=" text-white p-4 m-2 text-left
                   sm:p-2 sm:pt-0 sm:m-1 sm:text-2xl
                   md:p-4 md:pt-0 md:m-2 mg:text-3xl
-                  lg:p-2 lg:m-1 lg:ml-10 lg:text-4xl">{{ date }}</p>
+                  lg:p-2 lg:m-1 lg:ml-10 lg:text-4xl">{{ today.date }}</p>
         <p class="text-white p-4 pt-0 m-2 mb-12 text-left font-bold
                 sm:p-2 sm:pt-0 sm:m-1 sm:mb-10 sm:text-6xl
                 md:p-4 md:m-2 md:w-1/2 md:text-4xl
-                lg:p-2 lg:m-1 lg:pt-0 lg:ml-10 lg:mb-10 lg:w-1/3 lg:text-8xl">{{ time }}</p>
+                lg:p-2 lg:m-1 lg:pt-0 lg:ml-10 lg:mb-10 lg:w-1/3 lg:text-8xl">{{ today.time }}</p>
       </div>
       
       <!-- 로그인시도 화면-->
@@ -42,37 +42,34 @@
 </template>
 
 <script>
-import Utils from '@/store/utils.js'
+import dayjs from 'dayjs';
+import 'dayjs/locale/ko';
+dayjs.locale('ko');
 
 export default {
   data() {
     return {
       lock: true,
       login: false,
-      format: Utils,
-      time: Utils.getTime(null, 'en'),
-      date: Utils.getDate(null, 'kr'),
-      ap: Utils.getAp(null, 'kr')
+      today : {},
     };
   },
 
-  created() {
-      this.refreshTime();
+  mounted() {
+      this.updateTime()
+      setInterval(this.updateTime, 1000)
   },
-
   methods: {
       lockToggle(){
           if( this.login ) return;
           this.lock = !this.lock
       },
-      refreshTime() { // 시간과 날짜 1초마다 갱신
-          setInterval(() => {
-              this.time = this.format.getTime(null, 'en')
-              this.date = this.format.getDate(null, 'kr')
-              this.ap = this.format.getAp(null, 'kr')
-          }, 1000)
+      updateTime() { 
+        this.today = {
+          date: dayjs().format('MM월 DD일 dddd'),
+          time: dayjs().format('HH:mm:ss')
+        }
       },
-
       onLogin(e) {
           e.stopPropagation()
           this.login = true

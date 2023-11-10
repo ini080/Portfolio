@@ -34,8 +34,11 @@
 
 <script>
 import Utils from '@/store/utils.js'
-import moment from 'moment'
 import {mapState} from 'vuex'
+
+import dayjs from 'dayjs';
+import 'dayjs/locale/ko';
+dayjs.locale('ko');
 
 export default {
     name: 'TaskBar',
@@ -65,8 +68,8 @@ export default {
     methods: {
         updateTime() {
             this.today = {
-                date: moment().format('YYYY-MM-DD'),
-                time: moment().format('A HH:mm')
+                date: dayjs().format('YYYY-MM-DD'),
+                time: dayjs().format('A HH:mm')
             }
         },
         toggleStartMenu() {

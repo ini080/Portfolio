@@ -33,8 +33,11 @@
 </template>
 
 <script>
-import moment from 'moment'
 import {mapState} from 'vuex'
+
+import dayjs from 'dayjs';
+import 'dayjs/locale/ko';
+dayjs.locale('ko');
 
 export default {
     name: 'Calendar',
@@ -46,8 +49,8 @@ export default {
     data() {
         return {
             weekDays: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
-            currentDate: moment(),
-            date: moment(),
+            currentDate: dayjs(),
+            date: dayjs(),
             days: []
         }
     },
