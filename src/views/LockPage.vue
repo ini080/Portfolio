@@ -32,7 +32,7 @@
               <button v-if="!login" class="absolute top-14 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer border border-white rounded-md outline-none text-white font-bold py-1 px-10" @click="onLogin">
                 Login
               </button>
-              <div class="absolute w-60 top-4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-3xl" v-else>환영합니다</div>
+              <div v-else class="absolute w-60 top-4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-3xl">환영합니다</div>
             </transition>
           </div>
       </div>

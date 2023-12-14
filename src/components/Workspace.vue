@@ -24,7 +24,8 @@
         </grid-layout>
 
         <transition name="window">
-            <VSCode v-show="apps.vscode.isActive"/>
+            <!-- <VSCode v-show="apps.vscode.isActive"/> -->
+            <VSCode v-show="apps.edge.isActive"/>
         </transition>
 
     </div>
@@ -68,9 +69,9 @@ export default {
             this.updateGrid()
 
             let items = [
-                { label: 'This PC', icon: Utils.getImageUrl("computer")},
-                { label: 'Recycle Bin', icon: Utils.getImageUrl("trash-empty") },
-                { label: 'File Explorer', icon: Utils.getImageUrl("explorer") },
+                { label: '내 PC', icon: Utils.getImageUrl("computer")},
+                { label: '휴지통', icon: Utils.getImageUrl("trash-empty") },
+                { label: '파일탐색기', icon: Utils.getImageUrl("explorer") },
                 { label: 'Microsoft Store', icon: Utils.getImageUrl("store-" + this.iconTheme) },
                 { label: 'Microsoft Edge', icon: Utils.getImageUrl("edge") }
             ]

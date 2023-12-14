@@ -49,7 +49,10 @@
         </div>
 
         <div class="window-content flex-grow bg-black bg-opacity-80 backdrop-filter backdrop-blur-lg w-full" :class="{ 'pointer-events-none': isDragging || isResizing }">
-            <iframe src="http://www.youtube.com/embed/jNAK7QL5JjI" class="w-full h-full"></iframe>
+            <!-- <iframe src="http://www.youtube.com/embed/jNAK7QL5JjI" class="w-full h-full"></iframe> -->
+            <div>
+                hello
+            </div>
         </div>
 
     </vue-resizable>

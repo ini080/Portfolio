@@ -13,7 +13,8 @@ export default new Vuex.Store({
         notificationCenterOpen: false,
 
         apps: {
-            vscode: { name: 'Visual Studio Code', isMaximized: false, isMinimized: false, isActive: false }
+            vscode: { name: 'Visual Studio Code', isMaximized: false, isMinimized: false, isActive: false },
+            edge: { name: 'edge', isMaximized: false, isMinimized: false, isActive: false }
         }
 
     },

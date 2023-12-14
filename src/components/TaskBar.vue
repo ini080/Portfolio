@@ -51,7 +51,7 @@ export default {
             return [
                 { name: 'start', icon: Utils.getImageUrl('start'), action: this.toggleStartMenu },
                 { name: 'search', icon: Utils.getImageUrl('search-' + iconTheme), action: this.none },
-                { name: 'widget', icon: Utils.getImageUrl('widget'), action: this.none },
+                // { name: 'widget', icon: Utils.getImageUrl('widget'), action: this.none },
                 { name: 'settings', icon: Utils.getImageUrl('settings'), action: this.none },
                 { name: 'explorer', icon: Utils.getImageUrl('explorer'), action: this.none },
                 { name: 'edge', icon: Utils.getImageUrl('edge'), action: this.none },
@@ -83,7 +83,7 @@ export default {
         },
         none() {},
         openApp(appName) {
-            if (this.$store.state.apps[appName]) {  
+            if (this.$store.state.apps[appName]) {
                 if (this.$store.state.apps[appName].isActive) {
                     this.$store.state.apps[appName].isMinimized = !this.$store.state.apps[appName].isMinimized
                 } else {
